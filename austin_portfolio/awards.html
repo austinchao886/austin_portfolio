@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Awards – Austin Chao</title>
+
+  <!-- Global styles -->
+  <link rel="stylesheet" href="styls.css" />
+
+  <!-- Vendor css (同 index.html) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <!-- Page-only tiny tweaks -->
+  <style>
+    .page-hero { padding: 7% 0 3% 0; background: linear-gradient(180deg,rgba(61,3,184,.06),transparent); }
+    .award-card{
+      background:#fff;border-radius:14px;box-shadow:0 10px 28px rgba(0,0,0,.08);
+      transition:transform .25s ease, box-shadow .25s ease; height:100%;
+    }
+    .award-card:hover{ transform: translateY(-6px); box-shadow:0 14px 36px rgba(0,0,0,.14); }
+    .award-thumb{ aspect-ratio: 16/10; object-fit: cover; width:100%; border-radius:10px; }
+    .award-meta{ color:#6b7280; font-size:.95rem; }
+    .collapse-inner img{ width:100%; border-radius:10px; }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR (copied from main page) -->
+  <nav class="navbar navbar-light bg-light shadow navbar-expand-lg bg-body-tertiary" data-aos="fade-down" data-aos-delay="100">
+    <div class="container d-flex align-items-center justify-content-between">
+      <a href="index.html" class="navbar-brand logo d-flex align-items-center me-auto ">
+        <h1 class="fs-2 fw-bold mb-0">
+          <span class="text-dark">Austin</span><span class="text-primary">Chao</span>
+        </h1>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav gap-3">
+          <li><a href="index.html" class="nav-link fs-5">Home</a></li>
+          <li><a href="#" class="nav-link text-secondary fs-5">Education</a></li>
+          <li><a href="#" class="nav-link text-secondary fs-5">Research & Projects</a></li>
+          <li><a href="#" class="nav-link text-secondary fs-5">Work Experience & Skills</a></li>
+          <li><a href="awards.html" class="nav-link active text-primary fs-5" style="color:#25477D !important;">Awards</a></li>
+        </ul>
+      </div>
+      <div class="nav-social-icons d-none d-lg-flex align-items-center gap-3">
+        <a href="https://www.facebook.com/zhao.bai.ru.560442" class="text-secondary fs-4"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/bella_chao__austin/" class="text-secondary fs-4"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" class="text-secondary fs-4"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <header class="page-hero">
+    <div class="container" style="padding-bottom:0.2rem;">
+      <div class="d-flex flex-column align-items-start align-items-md-center" style="gap:0.2rem;">
+        <div style="width:60px;height:7px;background:#25477D;border-radius:4px 12px 12px 4px;margin-bottom:0.3rem;"></div>
+        <h2 class="fw-bold title-text mb-0" style="font-size:2.8rem;letter-spacing:-1px;">Awards</h2>
+      </div>
+    </div>
+  </header>
+
+    <!-- Awards Section -->
+    <section class="awards py-5 mt-5">
+  <div class="container awards-bg-decor" style="padding-top:0.1rem;padding-bottom:2.5rem;">
+        <!-- <h2 class="text-center mb-5">Awards & Certifications</h2> -->
+        <div class="list-group">
+
+        <div class="container">
+          <!-- <h2 class="text-center mb-5" style="color:#25477D;">Awards</h2> -->
+          <div class="awards-list-vertical" style="margin:0 auto;display:flex;flex-direction:column;gap:2.5rem;">
+            <!-- Academic Excellence Award -->
+            <div class="award-card d-flex flex-row align-items-center shadow rounded p-4 gap-4" style="background:#fff;">
+              <div class="award-img-col flex-shrink-0" style="min-width:160px;max-width:180px;">
+                <img src="image/awards/academic_excellence.jpg" alt="Academic Excellence Award" class="img-fluid rounded" style="max-height:160px;object-fit:cover;width:100%;">
+              </div>
+              <div class="award-info-col">
+                <div class="award-title mb-2" style="font-size:1.5rem;font-weight:700;color:#25477D;">Academic Excellence Award</div>
+                <div class="award-caption text-secondary" style="font-size:1.08rem;">Recognized for outstanding academic performance and dedication to excellence in coursework and research.</div>
+              </div>
+            </div>
+            <!-- Creative Mechanical Design -->
+            <div class="award-card d-flex flex-row align-items-center shadow rounded p-4 gap-4" style="background:#fff;">
+              <div class="award-img-col flex-shrink-0" style="min-width:160px;max-width:180px;">
+                <img src="image/awards/Certificate of Completion in Independent Study Projects – Creative Mechanical Design.jpg" alt="Certificate of Completion in Independent Study Projects – Creative Mechanical Design" class="img-fluid rounded" style="max-height:160px;object-fit:cover;width:100%;">
+              </div>
+              <div class="award-info-col">
+                <div class="award-title mb-2" style="font-size:1.5rem;font-weight:700;color:#25477D;">Certificate of Completion in Independent Study Projects – Creative Mechanical Design</div>
+                <div class="award-caption text-secondary" style="font-size:1.08rem;">Completed an independent project focused on innovative mechanical design and problem-solving.</div>
+              </div>
+            </div>
+            <!-- Microcontroller Certification -->
+            <div class="award-card d-flex flex-row align-items-center shadow rounded p-4 gap-4" style="background:#fff;">
+              <div class="award-img-col flex-shrink-0 d-flex flex-column gap-2" style="min-width:160px;max-width:180px;">
+                <img src="image/awards/micro_controller_certification1.jpg" alt="Microcontroller Certification 1" class="img-fluid rounded" style="max-height:75px;object-fit:cover;width:100%;">
+                <img src="image/awards/micro_controller_certification2.jpg" alt="Microcontroller Certification 2" class="img-fluid rounded" style="max-height:75px;object-fit:cover;width:100%;">
+              </div>
+              <div class="award-info-col">
+                <div class="award-title mb-2" style="font-size:1.5rem;font-weight:700;color:#25477D;">Microcontroller Certification</div>
+                <div class="award-caption text-secondary" style="font-size:1.08rem;">Certified for proficiency in microcontroller programming and embedded systems development.</div>
+              </div>
+            </div>
+            <!-- TEL Robotic Competition Award -->
+            <div class="award-card d-flex flex-row align-items-center shadow rounded p-4 gap-4" style="background:#fff;">
+              <div class="award-img-col flex-shrink-0" style="min-width:160px;max-width:180px;">
+                <img src="image/awards/TEL_robotic_competition.jpg" alt="TEL Robotic Competition Award" class="img-fluid rounded" style="max-height:160px;object-fit:cover;width:100%;">
+              </div>
+              <div class="award-info-col">
+                <div class="award-title mb-2" style="font-size:1.5rem;font-weight:700;color:#25477D;">TEL Robotic Competition Award</div>
+                <div class="award-caption text-secondary" style="font-size:1.08rem;">Awarded for excellence in robotics design and teamwork at the TEL Robotic Competition.</div>
+              </div>
+            </div>
+            <!-- Capstone Project Award -->
+            <div class="award-card d-flex flex-row align-items-center shadow rounded p-4 gap-4" style="background:#fff;">
+              <div class="award-img-col flex-shrink-0 d-flex flex-column gap-2" style="min-width:160px;max-width:180px;">
+                <img src="image/awards/Capstone.jpg" alt="Capstone Project Award 1" class="img-fluid rounded" style="max-height:75px;object-fit:cover;width:100%;">
+                <img src="image/awards/Capstone2.jpg" alt="Capstone Project Award 2" class="img-fluid rounded" style="max-height:75px;object-fit:cover;width:100%;">
+              </div>
+              <div class="award-info-col">
+                <div class="award-title mb-2" style="font-size:1.5rem;font-weight:700;color:#25477D;">Capstone Project Award</div>
+                <div class="award-caption text-secondary" style="font-size:1.08rem;">Recognized for leadership and innovation in a multidisciplinary capstone engineering project.</div>
+              </div>
+            </div>
+            <!-- Certificate of Appreciation -->
+            <div class="award-card d-flex flex-row align-items-center shadow rounded p-4 gap-4" style="background:#fff;">
+              <div class="award-img-col flex-shrink-0" style="min-width:160px;max-width:180px;">
+                <img src="image/awards/certificate_of_appreciation.jpg" alt="Certificate of Appreciation" class="img-fluid rounded" style="max-height:160px;object-fit:cover;width:100%;">
+              </div>
+              <div class="award-info-col">
+                <div class="award-title mb-2" style="font-size:1.5rem;font-weight:700;color:#25477D;">Certificate of Appreciation</div>
+                <div class="award-caption text-secondary" style="font-size:1.08rem;">Presented in recognition of valuable contributions and commitment to the community.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+    <div class="container d-flex flex-column align-items-center" data-aos="fade-down" data-aos-delay="100">
+      <!-- <ul class="d-flex align-items-center justify-content-center flex-wrap gap-3">
+        <li><a href="index.html" class="text-dark fs-4">Home</a></li>
+        <li><a href="index.html#about" class="text-dark fs-4">About</a></li>
+        <li><a href="index.html#portfolio" class="text-dark fs-4">Portfolio</a></li>
+        <li><a href="awards.html" class="text-dark fs-4">Awards</a></li>
+        <li><a href="index.html#contact" class="text-dark fs-4">Contact</a></li>
+      </ul> -->
+      <div class="social-links mt-2 d-flex align-items-center gap-2">
+        <i class="border rounded-circle text text-secondary bi bi-facebook"></i>
+        <i class="border rounded-circle text text-secondary bi bi-instagram"></i>
+        <i class="border rounded-circle text text-secondary bi bi-linkedin"></i>
+      </div>
+      <div class="text-center mt-4"><p>© Copyright 2025. All Rights Reserved.</p></div>
+    </div>
+  </footer>
+
+  <!-- JS (same order as index) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

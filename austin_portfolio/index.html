@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Austin Portfolio</title>
+    <link rel="stylesheet" href="styls.css">
+    <!-- bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Swiper Slider CSS  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css">
+    <!-- AOS CSS  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <!-- Styles CSS -->
+    <link rel="stylesheet" href="styls.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR  -->
+    <nav class="navbar navbar-light bg-light shadow navbar-expand-lg bg-body-tertiary" data-aos="fade-down"
+        data-aos-delay="100">
+        <div class="container d-flex align-items-center justify-content-between">
+
+            <a href="#" class="navbar-brand logo d-flex align-items-center me-auto ">
+                <h1 class="fs-2 fw-bold mb-0">
+                    <span class="text-dark">Austin</span><span class="text-primary">Chao</span>
+                </h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- MENU -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav gap-3">
+                    <li><a href="#" class="nav-link active text-primary fs-5">Home</a></li>
+                    <li><a href="#" class="nav-link text-secondary fs-5">Research & Projects</a></li>
+                    <li><a href="#" class="nav-link text-secondary fs-5">Work Experience & Skills</a></li>
+                    <li><a href="awards.html" class="nav-link text-secondary fs-5">Awards</a></li>
+                    <!-- <li><a href="#" class="nav-link text-secondary fs-5">About</a></li> -->
+                </ul>
+            </div>
+            <!-- Social Icons -->
+            <div class="nav-social-icons d-none d-lg-flex align-items-center gap-3">
+                <a href="https://www.facebook.com/zhao.bai.ru.560442" class="text-secondary fs-4"><i class="bi bi-facebook"></i></a>
+                <!-- <a href="#" class="text-secondary fs-4"><i class="bi bi-twitter-x"></i></a> -->
+                <a href="https://www.instagram.com/bella_chao__austin/" class="text-secondary fs-4"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" class="text-secondary fs-4"><i class="bi bi-linkedin"></i></a>
+            </div>
+        </div>
+    </nav>
+        <!-- HERO HEADER (Concise, background image, blur, one-liner) -->
+        <header class="hero-header-bg position-relative d-flex align-items-center justify-content-center">
+            <div class="hero-header-overlay text-center w-100">
+                <h1 class="hero-header-title fw-bold mb-3">Po Ju (Austin) Chao</h1>
+                <div class="hero-header-slogan fs-4 fw-semibold">Engineering Intelligent Robots for Everyday Life</div>
+            </div>
+        </header>
+    <!-- About Section -->
+    <section class="about">
+        <div class="title text-center d-flex flex-column align-items-center gap-2" data-aos="fade-up">
+            <h2 class="fw-bold title-text">About</h2>
+            <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg" width="200" height="20">
+                <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="#25477D" stroke-width="2"></path>
+            </svg>
+            <p class="fs-6 text-secondary w-50">A brief self-introduction and personal details.</p>
+        </div>
+        <div class="container about-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="about-img-col">
+                <img src="image/portrait/portrait1.jpg" alt="Austin Chao portrait" class="about-portrait img-fluid rounded">
+            </div>
+            <div class="about-info-col d-flex flex-column justify-content-center">
+                <h2 class="fw-bold mb-3 about-title">Robotics Control &amp; Mechanical Researcher</h2>
+                <div class="about-highlight mb-3">
+                    <span class="about-hello">Hello, my name is Austin Chao.</span> I am a robotics engineer specializing in control systems and algorithm development. My focus is on integrating navigation and SLAM algorithms with advanced control systems to build safer and more versatile robots. I am passionate about creating robotic systems that can seamlessly integrate into daily human life and truly assist people in meaningful ways.
+                </div>
+                <div class="personal-info shadow rounded p-4">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="d-flex flex-column align-items-start">
+                                <span class="label text-secondary">Name</span>
+                                <span class="value text-dark fw-bold">Austin Chao</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex flex-column align-items-start">
+                                <span class="label text-secondary">Phone</span>
+                                <span class="value text-dark fw-bold">+(886) 983 189 963</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex flex-column align-items-start">
+                                <span class="label text-secondary">Age</span>
+                                <span class="value text-dark fw-bold">22 Years</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex flex-column align-items-start">
+                                <span class="label text-secondary">E-mail</span>
+                                <span class="value text-dark fw-bold">austinchao886@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex flex-column align-items-start">
+                                <span class="label text-secondary">Occupation</span>
+                                <span class="value text-dark fw-bold">Robotics Researcher</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex flex-column align-items-start">
+                                <span class="label text-secondary">Nationality</span>
+                                <span class="value text-dark fw-bold">Taiwan</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Skills -->
+    <section class="skills">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="row g-4">
+
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skills-box">
+                        <h3 class="fs-5">HTML</h3>
+                        <p class="text-secondary">Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
+                        <div class="span text-end d-block">90%</div>
+                        <div class="progress">
+                            <div class="progress-bar"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skills-box">
+                        <h3 class="fs-5">CSS</h3>
+                        <p class="text-secondary">Nemo enim ipsam voluptatem quia voluptas sit aspernatur.</p>
+                        <div class="span text-end d-block">90%</div>
+                        <div class="progress">
+                            <div class="progress-bar"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="skills-box">
+                        <h3 class="fs-5">JavaScript</h3>
+                        <p class="text-secondary">Neque porro quisquam quia est qui dolorem ipsum quia dolor.</p>
+                        <div class="span text-end d-block">70%</div>
+                        <div class="progress">
+                            <div class="progress-bar"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="500">
+                    <div class="skills-box">
+                        <h3 class="fs-5">PhotoShop</h3>
+                        <p class="text-secondary">Quis autem vel eum iure reprehenderit qui in ea voluptate.</p>
+                        <div class="span text-end d-block">55%</div>
+                        <div class="progress">
+                            <div class="progress-bar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- PORTFOLIO -->
+    <section class="Research & Projects">
+        <div class="container">
+            <div class="title text-center d-flex flex-column align-items-center gap-2" data-aos="fade-up">
+                <h2 class="fw-bold title-text">Portfolio</h2>
+                <!-- svg -->
+                <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg" width="200" height="20">
+                    <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="#3d03b8"
+                        stroke-width="2"></path>
+                </svg>
+                <p class="fs-6 text-secondary w-50">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
+                    quam nihil molestiae consequatur vel illum qui dolorem</p>
+            </div>
+            <div class="pf-filters d-flex align-items-center justify-content-center flex-wrap gap-3 mt-3 p-3"
+                data-aos="fade-up" data-aos-delay="200">
+                <button class="btn btn-light" data-filter="all">All Work</button>
+                <button class="btn btn-light" data-filter=".WebD">Web Design</button>
+                <button class="btn btn-light" data-filter=".graphics">Graphics</button>
+                <button class="btn btn-light" data-filter=".motion">Motion</button>
+                <button class="btn btn-light" data-filter=".branding">Branding</button>
+            </div>
+            <div class="row pf-container g-4 mt-3 mb-3" data-aos="fade-up" data-aos-delay="300">
+                <!-- card 1 -->
+                <div class="col-md-6 col-lg-6 pf-wrap mix WebD">
+                    <div class="pf-card d-flex flex-column gap-3 rounded">
+                        <div class="pf-img">
+                            <img src="image/portfolio-1.jpg" alt="" class="img-fluid rounded">
+                            <div class="pf-bg-light"></div>
+                        </div>
+                        <div class="pf-content p-3">
+                            <span class="text-primary mt-2">Web Design</span>
+                            <h3 class="text-dark fs-3 mt-2 mb-2">Modern Dashboard Interface</h3>
+                            <p class="text-dark fs-6">Maecenas faucibus mollis posuere consectetur est at
+                                lobortis.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 2 -->
+                <div class="col-md-6 col-lg-6 pf-wrap mix graphics">
+                    <div class="pf-card d-flex flex-column gap-3 rounded">
+                        <div class="pf-img">
+                            <img src="image/portfolio-2.jpg" alt="" class="img-fluid rounded">
+                            <div class="pf-bg-light"></div>
+                        </div>
+                        <div class="pf-content p-3">
+                            <span class="text-primary mt-2">Graphics</span>
+                            <h3 class="text-dark fs-3 mt-2 mb-2">Creative Brand Identity</h3>
+                            <p class="text-dark fs-6">Vestibulum id ligula porta felis euismod semper at vulputate.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 3 -->
+                <div class="col-md-6 col-lg-6 pf-wrap mix motion">
+                    <div class="pf-card d-flex flex-column gap-3 rounded">
+                        <div class="pf-img">
+                            <img src="image/portfolio-3.jpg" alt="" class="img-fluid rounded">
+                            <div class="pf-bg-light"></div>
+                        </div>
+                        <div class="pf-content p-3">
+                            <span class="text-primary mt-2">Motion</span>
+                            <h3 class="text-dark fs-3 mt-2 mb-2">Product Animation Reel</h3>
+                            <p class="text-dark fs-6">Donec ullamcorper nulla non metus auctor fringilla dapibus.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 4 -->
+                <div class="col-md-6 col-lg-6 pf-wrap mix branding">
+                    <div class="pf-card d-flex flex-column gap-3 rounded">
+                        <div class="pf-img">
+                            <img src="image/portfolio-4.jpg" alt="" class="img-fluid rounded">
+                            <div class="pf-bg-light"></div>
+                        </div>
+                        <div class="pf-content p-3">
+                            <span class="text-primary mt-2">Branding</span>
+                            <h3 class="text-dark fs-3 mt-2 mb-2">Product Animation Reel</h3>
+                            <p class="text-dark fs-6">Vestibulum id ligula porta felis euismod semper at vulputate.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 5 -->
+                <div class="col-md-6 col-lg-6 pf-wrap mix branding">
+                    <div class="pf-card d-flex flex-column gap-3 rounded">
+                        <div class="pf-img">
+                            <img src="image/portfolio-5.jpg" alt="" class="img-fluid rounded">
+                            <div class="pf-bg-light"></div>
+                        </div>
+                        <div class="pf-content p-3">
+                            <span class="text-primary mt-2">Branding</span>
+                            <h3 class="text-dark fs-3 mt-2 mb-2">Luxury Brand Package</h3>
+                            <p class="text-dark fs-6">Aenean lacinia bibendum nulla sed consectetur elit.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- card 6 -->
+                <div class="col-md-6 col-lg-6 pf-wrap mix WebD">
+                    <div class="pf-card d-flex flex-column gap-3 rounded">
+                        <div class="pf-img">
+                            <img src="image/portfolio-6.jpg" alt="" class="img-fluid rounded">
+                            <div class="pf-bg-light"></div>
+                        </div>
+                        <div class="pf-content p-3">
+                            <span class="text-primary mt-2">Web Design</span>
+                            <h3 class="text-dark fs-3 mt-2 mb-2">E-commerce Platform</h3>
+                            <p class="text-dark fs-6">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact -->
+    <section class="contact">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div class="contact-content" data-aos="fade-right" data-aos-delay="200">
+                        <div class="mb-3 fs-5">Contact</div>
+                        <h2 class="mb-4">Nemo enim ipsam voluptatem quia voluptas aspernatur</h2>
+                        <p class="lead mb-2">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
+                            suscipit laboriosam.</p>
+                        <div class="contact-info mt-5">
+                            <div class="info-box d-flex align-items-center mb-2">
+                                <i class="bi bi-envelope-at me-3 fs-5 text-primary"></i>
+                                <span class="fs-6">info@example.com</span>
+                            </div>
+
+                            <div class="info-box d-flex align-items-center mb-2">
+                                <i class="bi bi-telephone me-3 fs-5 text-primary"></i>
+                                <span class="fs-6">+1 5589 55488 558</span>
+                            </div>
+
+                            <div class="info-box d-flex align-items-center mb-2">
+                                <i class="bi bi-geo-alt me-3 fs-5 text-primary"></i>
+                                <span class="fs-6">A108 Adam Street, New York, NY 535022</span>
+                            </div>
+
+                            <a href="#" class="map-link d-inline-flex align-items-center text-dark fs-5 mt-3">Open Map
+                                <i class="bi bi-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-form shadow rounded" data-aos="fade-left" data-aos-delay="300">
+                        <div class="p-4 p-lg-5">
+                            <form>
+                                <div class="row gy-4">
+                                    <div class="col-12">
+                                        <input type="text" class="form-control" placeholder="Your Name" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <input type="email" class="form-control" placeholder="Your E-mail" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <input type="text" class="form-control" placeholder="Subject" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <textarea class="form-control" name="massage" rows="6" placeholder="Message"></textarea>
+                                    </div>
+                                    <div class="col-12 text-center">
+                                        <button type="button" class="btn btn-submit w-100">Submit Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer shadow p-5">
+        <div class="container d-flex flex-column align-items-center" data-aos="fade-down" data-aos-delay="100">
+            <ul class="d-flex align-items-center justify-content-center flex-wrap gap-3">
+                <li><a href="#" class="text-dark fs-4">Home</a></li>
+                <li><a href="#" class="text-dark fs-4">About</a></li>
+                <li><a href="#" class="text-dark fs-4">Services</a></li>
+                <li><a href="#" class="text-dark fs-4">Blog</a></li>
+                <li><a href="#" class="text-dark fs-4">Contact</a></li>
+            </ul>
+
+            <div class="social-links mt-2 d-flex align-items-center gap-2">
+                <i class="border rounded-circle text text-secondary bi bi-twitter-x"></i>
+                <i class="border rounded-circle text text-secondary bi bi-facebook"></i>
+                <i class="border rounded-circle text text-secondary bi bi-instagram"></i>
+                <i class="border rounded-circle text text-secondary bi bi-linkedin"></i>
+            </div>
+            <div class="text-center mt-4">
+                <p>© Copyright 2025. All Rights Reserved By <a href="#"><strong class="px-1 text-dark">K2infocom</strong></a></p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    <!-- Swiper Slider JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+    <!-- AOS JS  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Mixitup JS  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
+    <!-- Script JS -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+</html>

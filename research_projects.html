@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research & Projects | Austin Chao</title>
+    <link rel="stylesheet" href="styls.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        .rp-card {
+            background: #f8f9fa;
+            border-radius: 18px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            border: 2px solid #d1d5db;
+            padding: 2rem 2rem 1.5rem 2rem;
+            margin-bottom: 2rem;
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+        .rp-card img {
+            max-width: 100%;
+            max-height: 320px;
+            width: auto;
+            height: auto;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .rp-card-content {
+            flex: 1;
+        }
+        .rp-card-title {
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: #25477D;
+        }
+        .rp-card-sub {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #444;
+        }
+        .rp-card-org {
+            float: right;
+            font-size: 1rem;
+            color: #666;
+        }
+        .rp-card-list {
+            margin-top: 0.5rem;
+            margin-bottom: 1.2rem;
+        }
+        .rp-card-btns {
+            display: flex;
+            gap: 1rem;
+        }
+        .rp-card-btns .btn {
+            border-radius: 24px;
+            padding: 0.5rem 1.5rem;
+            font-size: 1.1rem;
+            border: 2px solid #25477D;
+            background: #fff;
+            color: #25477D;
+            transition: background 0.2s, color 0.2s;
+        }
+        .rp-card-btns .btn:hover {
+            background: #25477D;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light shadow navbar-expand-lg">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="index.html" class="navbar-brand logo d-flex align-items-center me-auto ">
+                <h1 class="fs-2 fw-bold mb-0">
+                    <span class="text-dark">Austin</span><span class="text-primary">Chao</span>
+                </h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav gap-3">
+                    <li><a href="index.html" class="nav-link text-secondary fs-5">Home</a></li>
+                    <li><a href="education_work.html" class="nav-link text-secondary fs-5">Education & Work</a></li>
+                    <li><a href="research_projects.html" class="nav-link active text-primary fs-5">Research & Projects</a></li>
+                    <li><a href="awards.html" class="nav-link text-secondary fs-5">Awards</a></li>
+                </ul>
+            </div>
+            <div class="nav-social-icons d-none d-lg-flex align-items-center gap-3">
+                <a href="https://www.facebook.com/zhao.bai.ru.560442" class="text-secondary fs-4"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/bella_chao__austin/" class="text-secondary fs-4"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" class="text-secondary fs-4"><i class="bi bi-linkedin"></i></a>
+            </div>
+        </div>
+    </nav>
+    <main class="container py-5">
+        <!-- Work Area -->
+        <h2 class="fw-bold mb-4" style="color:#25477D;">Work:</h2>
+        <!-- Panda Motion Control -->
+        <div class="rp-card">
+            <img src="image/portfolio-1.jpg" alt="Work Example">
+            <div class="rp-card-content">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div class="rp-card-title">Panda Robot - Motion Control</div>
+                    <div style="display: flex; align-items: center; gap: 0.4rem; background: #e9ecef; border-radius: 6px; padding: 0.2rem 0.7rem; font-size: 1rem; color: #25477D; font-weight: 500; box-shadow: 0 1px 4px rgba(0,0,0,0.04);">
+                        <i class="bi bi-pin-angle" style="font-size: 1.1rem; margin-right: 0.2rem;"></i>
+                        current focus
+                    </div>
+                </div>
+                <div class="rp-card-sub">ITRI <span class="rp-card-org">Year</span></div>
+                <ul class="rp-card-list">
+                    <li>Developed perception algorithms for a collaborative robot using computer vision and sensor fusion.</li>
+                    <li>Integrated ROS2 nodes for real-time data processing and feedback.</li>
+                </ul>
+                <div class="rp-card-btns">
+                    <a href="#" class="btn">Demo video</a>
+                    <a href="#" class="btn">Webpage</a>
+                </div>
+            </div>
+        </div>
+        <!-- Panda Perception -->
+        <div class="rp-card">
+            <img src="image/portfolio-1.jpg" alt="Work Example">
+            <div class="rp-card-content">
+                <div class="rp-card-title">Panda Robot - Perception</div>
+                <div class="rp-card-sub">ITRI <span class="rp-card-org">Year</span></div>
+                <ul class="rp-card-list">
+                    <li>Developed perception algorithms for a collaborative robot using computer vision and sensor fusion.</li>
+                    <li>Integrated ROS2 nodes for real-time data processing and feedback.</li>
+                </ul>
+                <div class="rp-card-btns">
+                    <a href="#" class="btn">Demo video</a>
+                    <a href="#" class="btn">Webpage</a>
+                </div>
+            </div>
+        </div>
+        <!-- Add more work cards as needed -->
+
+        <!-- Research Area -->
+        <h2 class="fw-bold mb-4" style="color:#25477D;">Research:</h2>
+        
+        <!-- 2D Inverted Pendulum -->
+        <div class="rp-card">
+            <img src="image/portfolio-5.jpg" alt="2D Inverted Pendulum Project">
+            <div class="rp-card-content">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div class="rp-card-title">Modeling and Control of a 2D Inverted Pendulum</div>
+                    <div style="display: flex; align-items: center; gap: 0.4rem; background: #e9ecef; border-radius: 6px; padding: 0.2rem 0.7rem; font-size: 1rem; color: #25477D; font-weight: 500; box-shadow: 0 1px 4px rgba(0,0,0,0.04);">
+                        <i class="bi bi-pin-angle" style="font-size: 1.1rem; margin-right: 0.2rem;"></i>
+                        current focus
+                    </div>
+                </div>
+                <div class="rp-card-sub">Personal Project <span class="rp-card-org">2025</span></div>
+                <ul class="rp-card-list">
+                    <li>Designed and simulated a 2D inverted pendulum system using MATLAB and Simulink.</li>
+                    <li>Implemented feedback control algorithms for stabilization and trajectory tracking.</li>
+                    <li>Analyzed system dynamics and validated controller performance through simulation and experiment.</li>
+                </ul>
+                <div class="rp-card-btns">
+                    <a href="#" class="btn">Demo video</a>
+                    <a href="#" class="btn">Project Report</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Autonomous SLAM Mobile Robot -->
+        <div class="rp-card">
+            <img src="image/portfolio-4.jpg" alt="Autonomous Robot Obstacle Avoidance">
+            <div class="rp-card-content">
+                <div class="rp-card-title">Autonomous Robot Obstacle Avoidance using Depth Sensing</div>
+                <div class="rp-card-sub">Existential Robotics Laboratory (ERL), Dept. of ECE, PI: Prof. Nikolay Atanasov. <span class="rp-card-org">UC San Diego</span></div>
+                <ul class="rp-card-list">
+                    <li>Simulated in PyBullet and Gazebo to verify whether obstacle avoidance autonomous vehicle can be achieved by combining the conversion of 3D images from a depth camera into a 2D costmap with the AStar and Time Elastic Band (TEB) algorithm.</li>
+                    <li>Applied simulation results to a real race car and used the Adaptive Monte Carlo Localization (AMCL) method to ensure both systems operated correctly.</li>
+                </ul>
+                <div class="rp-card-btns">
+                    <a href="#" class="btn">Demo video</a>
+                    <a href="#" class="btn">Research Report</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Competition & Exhibition Area --> 
+        <h2 class="fw-bold mb-4" style="color:#25477D;">Competition & Exhibition:</h2>
+        <!-- TEL Robotics Competition -->
+        <div class="rp-card">
+            <img src="image/Portfolio/TEL_Robotic_Competition.jpg" alt="Frisbee-Launching Mobile Robot" srcset="image/Portfolio/TEL_Robotic_Competition.jpg 1x, image/Portfolio/TEL_Robotic_Competition.jpg 2x">
+            <div class="rp-card-content">
+                <div class="rp-card-title">Design and Implementation of a Frisbee-Launching Mobile Robot</div>
+                <div class="rp-card-sub">Department of Mechanical Engineering &nbsp; | &nbsp; Advisor: Prof. Tsai, Shyi-Jeng</div>
+                <ul class="rp-card-list" style="margin-top:1rem;">
+                    <li style="display:flex; align-items:center; margin-bottom:0.7rem;">
+                        <span style="display:inline-block; width:10px; height:10px; background:#25477D; border-radius:50%; margin-right:0.8rem;"></span>
+                        <span style="font-weight:600; color:#25477D;">Participated in the 2024 Tokyo Tech Robocon and successfully advanced to the finals</span>
+                    </li>
+                    <li style="display:flex; align-items:center; margin-bottom:0.7rem;">
+                        <span style="display:inline-block; width:10px; height:10px; background:#25477D; border-radius:50%; margin-right:0.8rem;"></span>
+                        <span style="font-weight:600; color:#25477D;">Achieved omnidirectional mobility, wireless remote control, automatic reloading, and continuous frisbee launching</span>
+                    </li>
+                    <li style="display:flex; align-items:center; margin-bottom:0.7rem;">
+                        <span style="display:inline-block; width:10px; height:10px; background:#25477D; border-radius:50%; margin-right:0.8rem;"></span>
+                        <span style="font-weight:600; color:#25477D;">Applied advanced control systems to ensure smoother and more stable robot operation</span>
+                    </li>
+                    <li style="display:flex; align-items:center; margin-bottom:0.7rem;">
+                        <span style="display:inline-block; width:10px; height:10px; background:#25477D; border-radius:50%; margin-right:0.8rem;"></span>
+                        <span style="font-weight:600; color:#25477D;">Integrated stereo vision and machine learning–based targeting system for accurate frisbee launching</span>
+                    </li>
+                </ul>
+                <div class="rp-card-btns">
+                    <a href="https://youtu.be/3CL8_8u2Yug" class="btn">Demo video</a>
+                    <a href="research_file/Capstone%20Project_%20Development%20of%20a%20Frisbee-Launching%20Mobile%20Robot.pdf" class="btn" target="_blank">Research Report</a>
+                </div>
+            </div>
+        </div>
+<!-- 
+        TEL Robotics Competition
+        <div class="rp-card">
+            <img src="image/Portfolio/TEL_Robotic_Competition.jpg" alt="Basketball Free Throw Research">
+            <div class="rp-card-content">
+                <div class="rp-card-title">Analysis of Basketball Free Throw Techniques Using IMU and Image Recognition</div>
+                <div class="rp-card-sub">PI: Prof. Hsi-Pin Ma Dept. of ECE, Prof. Wen-Hsin Chiu Dept. of Kinesiology <span class="rp-card-org">NTHU</span></div>
+                <ul class="rp-card-list">
+                    <li>Constructed a low-cost device for analyzing free throw posture using an inertial measurement unit (IMU), Arduino Nano, SD card module, object recognition model, and 3D-printed components.</li>
+                    <li>Captured hand trajectory with IMU and recorded the physical parameters of ball release speed, and angle using ball detection model.</li>
+                </ul>
+                <div class="rp-card-btns">
+                    <a href="#" class="btn">Demo video</a>
+                    <a href="#" class="btn">Research Report</a>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Projects Area --> 
+        <h2 class="fw-bold mb-4" style="color:#25477D;">Projects:</h2>
+        <!--  -->
+        <div class="rp-card">
+            <img src="image/portfolio-5.jpg" alt="Project Example">
+            <div class="rp-card-content">
+                <div class="rp-card-title">Modeling and Control of a 2D Inverted Pendulum</div>
+                <div class="rp-card-sub">Personal Project <span class="rp-card-org">Year</span></div>
+                <ul class="rp-card-list">
+                    <li>Designed and simulated a 2D inverted pendulum system using MATLAB and Simulink.</li>
+                    <li>Implemented feedback control algorithms for stabilization and trajectory tracking.</li>
+                </ul>
+                <div class="rp-card-btns">
+                    <a href="#" class="btn">Demo video</a>
+                    <a href="#" class="btn">Project Report</a>
+                </div>
+            </div>
+        </div>
+        <!-- Add more project cards as needed -->
+    </main>
+    <footer class="footer text-center py-4 bg-light">
+        <div class="container">
+            <span class="text-muted">© 2025 Austin Chao</span>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

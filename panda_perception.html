@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panda Perception | Austin Chao</title>
+    <link rel="stylesheet" href="styls.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body { background: #f8f9fa; }
+        .section-block {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            border: 2px solid #d1d5db;
+            padding: 2rem 2rem 1.5rem 2rem;
+            margin-bottom: 2rem;
+        }
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #25477D;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            margin-bottom: 1rem;
+        }
+        .section-body {
+            font-size: 1.13rem;
+            color: #222;
+            line-height: 1.7;
+        }
+        .back-btn {
+            border-radius: 24px;
+            font-size: 1.1rem;
+            padding: 0.5rem 1.5rem;
+            border: 2px solid #25477D;
+            background: #fff;
+            color: #25477D;
+            transition: background 0.2s, color 0.2s;
+            margin-bottom: 2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+        .back-btn:hover {
+            background: #25477D;
+            color: #fff;
+        }
+        .action-blocks {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        .action-sub-block {
+            flex: 1 1 320px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            border: 1.5px solid #d1d5db;
+            padding: 1.2rem 1.2rem 1rem 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .action-sub-title {
+            font-size: 1.18rem;
+            font-weight: 600;
+            color: #25477D;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.7rem;
+        }
+        @media (max-width: 900px) {
+            .action-blocks { flex-direction: column; gap: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <a href="research_projects.html" class="back-btn"><i class="bi bi-arrow-left"></i> back to Research &amp; Project</a>
+        <div class="section-block">
+            <div class="section-title">🐼 Overview</div>
+            <div class="section-body">
+                The Panda robot is designed to perform tree-climbing tasks, which require accurate perception of its environment. In order to climb, the robot must first detect and localize a suitable tree trunk, estimate its own relative position, and then move toward the target before initiating climbing.<br><br>
+                The Panda Perception module provides this capability by integrating vision-based detection, depth sensing, and pose estimation. It ensures that the robot can identify a tree trunk as a stable target, determine its own location relative to it, and guide its motion toward the trunk as the first step toward autonomous climbing.
+            </div>
+        </div>
+        <div class="section-block">
+            <div class="section-title">⚡ Challenge</div>
+            <div class="section-body">
+                <ul style="padding-left:1.2rem;">
+                    <li>Tree Trunk Detection: The system must reliably detect tree trunks in outdoor environments with varying light and background conditions.</li>
+                    <li>Relative Visual Localization: The robot needs to estimate its relative position and orientation with respect to the tree trunk for precise navigation.</li>
+                    <li>Stable Reference Target: The trunk must be treated as a fixed target in the environment, ensuring the robot can use it as a consistent climbing anchor.</li>
+                    <li>Onboard Deployment: The entire perception pipeline must run in real time on the NVIDIA Jetson Orin Nano, a resource-constrained edge device.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="section-block">
+            <div class="section-title">🚀 Action</div>
+            <div class="action-blocks" style="flex-direction: column; gap: 1.2rem;">
+                <div class="action-sub-block mb-3">
+                    <div class="action-sub-title">🧩 Trunk Detection &amp; Training</div>
+                    <div class="section-body">
+                        To enable reliable tree trunk perception, I adopted a YOLOv8 segmentation model as the core detector. To overcome the inefficiency of manual annotation, I implemented an auto-labeling pipeline that integrates SAM (Segment Anything Model) with LKT Tracker, ensuring accurate and consistent sequence labeling across frames. The model was trained with extensive data augmentation and optimized through Weights &amp; Biases hyperparameter sweeps, which enhanced robustness in outdoor tree environments. For deployment, I converted the trained model into ONNX format and accelerated inference using onnxruntime-gpu, achieving low-latency, real-time performance on the Jetson Orin Nano, even under resource constraints.
+                    </div>
+                        <div class="d-flex flex-row justify-content-between align-items-start mt-4" style="width:100%; gap:2.5rem;">
+                            <div style="width:49%; min-width:280px; display:flex; flex-direction:column; align-items:center;">
+                                <img src="image/Portfolio/material/panda_perception/Wandb_Result.png" alt="YOLOv8 Training Metrics" style="width:100%; height:320px; object-fit:contain; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#f8f9fa;">
+                                <div style="margin-top:0.7rem; font-size:1rem; color:#25477D; text-align:center;">YOLOv8 training metrics: precision vs recall and mAP</div>
+                            </div>
+                            <div style="width:49%; min-width:280px; display:flex; flex-direction:column; align-items:center;">
+                                <video controls style="width:100%; height:320px; object-fit:contain; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#f8f9fa;">
+                                    <source src="image/Portfolio/material/panda_perception/Auto_Label_System.webm" type="video/webm">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div style="margin-top:0.7rem; font-size:1rem; color:#25477D; text-align:center;">Auto-Labeling System Demo (LKT Tracker + SAM)</div>
+                            </div>
+                        </div>
+
+                </div>
+                <div class="action-sub-block">
+                    <div class="action-sub-title">🧭 Localization &amp; Mapping</div>
+                    <div class="section-body" style="margin-bottom:2.2rem;">
+                        For localization, I initially experimented with ICP-based visual odometry, aligning consecutive frames to estimate camera pose and mapping tree trunk positions onto a global map. While effective in controlled cases, this approach became unreliable when the trunk was out of view for extended periods or when large obstacles blocked the line of sight. To address this limitation, I transitioned to a VSLAM framework, which leverages feature-based tracking to maintain odometry and deliver more robust localization, even when the trunk is temporarily occluded.
+                    </div>
+                    <!-- Row 1 -->
+                    <div class="d-flex flex-row justify-content-between align-items-start mb-3" style="width:100%; gap:2.5rem;">
+                        <div style="width:49%; min-width:280px; display:flex; flex-direction:column; align-items:center;">
+                            <video controls style="width:100%; height:320px; object-fit:contain; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#f8f9fa;">
+                                <source src="image/Portfolio/material/panda_perception/TreeTrunk_Alignment.webm" type="video/webm">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div style="width:49%; min-width:280px; display:flex; flex-direction:column; align-items:center;">
+                            <video controls style="width:100%; height:320px; object-fit:contain; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#f8f9fa;">
+                                <source src="image/Portfolio/material/panda_perception/Visual_Odometry_DEMO.webm" type="video/webm">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                    <div class="section-body" style="margin-bottom:2.2rem; text-align:center;">
+                        Initially, I used ICP for frame-to-frame alignment. As shown in the right video, this method can roughly indicate the relative position between the tree and the camera, but the trunk’s position is not stable. This demonstrates that the ICP-based approach is not robust in practice.                    </div>
+                    <!-- Divider -->
+                    <hr style="border-top: 2px dashed #161616; margin: 2.2rem 0;">
+
+                    <!-- Row 2 -->
+                    <div class="d-flex flex-row justify-content-between align-items-start mb-3" style="width:100%; gap:2.5rem;">
+                        <div style="width:49%; min-width:280px; display:flex; flex-direction:column; align-items:center;">
+                            <video controls style="width:100%; height:320px; object-fit:contain; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#f8f9fa;">
+                                <source src="image/Portfolio/material/panda_perception/VSLAM_Demo.webm" type="video/webm">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div style="width:49%; min-width:280px; display:flex; flex-direction:column; align-items:center;">
+                            <video controls style="width:100%; height:320px; object-fit:contain; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#f8f9fa;">
+                                <source src="image/Portfolio/material/panda_perception/VSLAM_Demo1.mp4" type="video/webm">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                    <div class="section-body" style="margin-bottom:2.2rem; text-align:center;">
+                        Here, I replaced visual odometry with VSLAM. Unlike ICP-based alignment, VSLAM leverages spatial feature points to estimate the robot’s current pose more robustly. The left video shows the camera pose output from the VSLAM module, while the right video demonstrates a path movement test.
+                    </div>
+                <!-- END: Two-row video block -->
+                </div>
+            </div>
+        </div>
+        <div class="section-block">
+            <div class="section-title">🎯 Result</div>
+                <div class="d-flex flex-row justify-content-between align-items-stretch" style="gap:2.5rem; width:100%;">
+                    <div class="section-body" style="width:49%; min-width:280px; display:flex; flex-direction:column; justify-content:center;">
+                        We successfully deployed the Panda Perception pipeline on the NVIDIA Jetson Orin Nano, achieving real-time performance with high detection accuracy and stable localization. The YOLOv8 model, accelerated through ONNX and onnxruntime-gpu, runs with low latency, while the integration of VSLAM ensures robust odometry even when the tree trunk is temporarily out of view. This demonstrates that the system can reliably detect tree trunks, estimate relative poses, and provide consistent localization in outdoor scenarios under limited computational resources.From the overall performance, we can observe that the system runs smoothly and the trunk detection is highly robust. The tree trunk consistently remains in the same position on the map, which provides a reliable reference for localization.<br><br>
+                    </div>
+                    <div style="width:49%; min-width:280px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+                        <video controls style="width:100%; height:320px; object-fit:contain; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#f8f9fa;">
+                            <source src="image/Portfolio/material/panda_perception/Panda_Perception_DEMO.webm" type="video/webm">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div style="margin-top:0.7rem; font-size:1rem; color:#25477D; text-align:center;">Panda Perception deployment demo on Jetson Orin Nano</div>
+                    </div>
+                </div>
+                <div class="section-body" style="width:100%; margin-top:1.5rem; text-align:left;">
+                        <b>As the next step, the perception system will be integrated onto the Panda robot platform, where it will be tested in real-world tree-climbing tasks to validate its effectiveness in guiding the robot toward a target trunk and supporting autonomous climbing behavior.</b>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.js"></script>
+</body>
+</html>

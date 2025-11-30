@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panda Motion Control | Austin Chao</title>
+    <link rel="stylesheet" href="styls.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body { background: #f8f9fa; }
+        .section-block {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            border: 2px solid #d1d5db;
+            padding: 2rem 2rem 1.5rem 2rem;
+            margin-bottom: 2rem;
+        }
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #25477D;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            margin-bottom: 1rem;
+        }
+        .section-body {
+            font-size: 1.25rem;
+            color: #222;
+            line-height: 1.7;
+        }
+        .back-btn {
+            border-radius: 24px;
+            font-size: 1.2rem;
+            padding: 0.5rem 1.5rem;
+            border: 2px solid #25477D;
+            background: #fff;
+            color: #25477D;
+            transition: background 0.2s, color 0.2s;
+            margin-bottom: 2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+        .back-btn:hover {
+            background: #25477D;
+            color: #fff;
+        }
+        .action-blocks {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        .action-sub-block {
+            flex: 1 1 320px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            border: 1.5px solid #d1d5db;
+            padding: 1.2rem 1.2rem 1rem 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .action-sub-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #25477D;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.7rem;
+        }
+        /* Responsive video helpers for layout stability */
+        .demo-video { width: 100%; max-width: 100%; height: auto; max-height: 360px; object-fit:contain; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.06); background:#fff; }
+        .demo-video.small { max-height: 360px; }
+        /* Enforce exact height for video containers to match visual height */
+        .demo-video-wrapper { height: 360px; display: flex; align-items: center; justify-content: center; }
+        /* Keep arm-videos side-by-side on medium+ screens, but allow wrap on small screens */
+        @media (min-width: 768px) {
+            .arm-videos { flex-wrap: nowrap !important; }
+            .arm-videos > div { flex: 1 1 48%; max-width:48%; }
+        }
+        /* Strong layout enforcement for the drop/arm test row */
+        .test-row { display:flex; gap:1rem; flex-wrap:wrap; }
+        .test-left { flex: 0 0 48%; max-width:48%; }
+        .test-right { flex: 0 0 48%; max-width:48%; }
+        @media (max-width: 900px) {
+            .test-left, .test-right { flex: 0 0 100%; max-width:100%; }
+        }
+        @media (max-width: 900px) {
+            .action-blocks { flex-direction: column; gap: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <a href="research_projects.html" class="back-btn"><i class="bi bi-arrow-left"></i> back to Research &amp; Project</a>
+        <div class="section-block">
+            <div class="section-title">Log</div>
+            <div class="section-body" style="display:flex; gap:2rem; flex-wrap:wrap;">
+                <!-- Left column: info blocks -->
+                <div style="flex: 1 1 60%; min-width:280px; max-width:50%; display:flex; flex-direction:column; gap:1rem;">
+                    <div style="background: #f0f4f8; border-left: 4px solid #25477D; padding: 1rem 1.2rem; border-radius: 6px; margin-bottom: 1rem;">
+                        <div style="font-weight: 600; color: #1a3a5c; margin-bottom: 0.5rem;">Current Focus:</div>
+                        <ul style="padding-left: 1.2rem; margin: 0;">
+                            <li>• Transitioning the climbing policy from Position Control to Torque Control for more adaptive and robust climbing behavior</li>
+                            <li>• Integrating IMU-based base-velocity estimation to support the walking policy, which requires accurate robot base velocity observations</li>
+                            <li>• Deploying the IMU on hardware and establishing communication through LCM</li>
+                            <li>• Addressing sensor-data loss issues within the hierarchical control structure, particularly with Isaac sensor streams</li>
+                        </ul>
+                    </div>
+                    <div style="background: #f9f9f9; border-left: 4px solid #95a5a6; padding: 1rem 1.2rem; border-radius: 6px;">
+                        <div style="font-weight: 600; color: #555; margin-bottom: 0.5rem;">Latest Updates:</div>
+                        <ul style="padding-left: 1.2rem; margin: 0; font-size: 1.05rem;">
+                            <li><span style="color: #27ae60; font-weight: 600;">✓ Completed:</span> Full Walking Policy Deployment</li>
+                            <li><span style="color: #27ae60; font-weight: 600;">✓ Completed:</span> Apply Feedback Control on Real Robot</li>
+                            <li><span style="color: #27ae60; font-weight: 600;">✓ Completed:</span> LCM Communication Structure</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Right column: video placeholder -->
+                <div style="flex: 1 1 30%; min-width:280px; max-width:100%; display:flex; align-items:center; justify-content:center;">
+                    <div style="width:400px; height:600px; background:#fff; border-radius:12px; border:1px solid #e6eef8; box-shadow:0 1px 4px rgba(0,0,0,0.02); overflow:hidden; padding:0; display:flex; align-items:center; justify-content:center;">
+                        <video controls autoplay muted playsinline loop width="400" height="600" style="width:400px; height:600px; object-fit:cover; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#f8f9fa; margin:0; display:block;">
+                            <source src="image/Portfolio/material/panda_motion_control/panda_hi.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-block">
+            <div class="section-title">🎯 Video Demo</div>
+                
+                <!-- Walking Demo Section -->
+                <div style="margin-bottom: 2rem;">
+                    <div style="font-size: 1.5rem; font-weight: 600; color: #1a3a5c; margin-bottom: 1rem;">Autonomous Walking & Tree Climbing Demo (2025.11.07)</div>
+                    <div class="d-flex flex-row justify-content-between align-items-stretch" style="gap:2.5rem; width:100%;">
+                        <!-- <div class="section-body" style="width:49%; min-width:280px; display:flex; flex-direction:column; justify-content:center;">
+                            The Panda robot demonstrates smooth and stable walking locomotion learned through reinforcement learning. The policy enables the robot to maintain balance, adjust gait patterns, and navigate across varied terrain in real time. The learned behavior shows natural motion dynamics that generalize well beyond training conditions.
+                        </div> -->
+                        <div style="width:49%; min-width:280px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+                            <video controls autoplay muted playsinline loop style="width:100%; height:auto; object-fit:contain; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#f8f9fa;">
+                                <source src="image/Portfolio/material/panda_motion_control/panda_climbing.MP4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div style="margin-top:0.7rem; font-size:1rem; color:#25477D; text-align:center;">Panda robot climbing with learned RL policy</div>
+                        </div>
+                        <div style="width:49%; min-width:280px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+                            <video controls autoplay muted playsinline loop style="width:100%; height:auto; object-fit:contain; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#f8f9fa;">
+                                <source src="image/Portfolio/material/panda_motion_control/panda_walking.MP4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div style="margin-top:0.7rem; font-size:1rem; color:#25477D; text-align:center;">Panda robot walking with learned RL policy</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Climbing Demo Section -->
+                <!-- <div style="margin-bottom: 1rem;">
+                    <div style="font-size: 1.5rem; font-weight: 600; color: #1a3a5c; margin-bottom: 1rem;">🌲 Tree Climbing Demo</div>
+                    <div class="d-flex flex-row justify-content-between align-items-stretch" style="gap:2.5rem; width:100%;">
+                        <div style="width:49%; min-width:280px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+                            <video controls autoplay muted playsinline style="width:100%; height:auto; object-fit:contain; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#f8f9fa;">
+                                <source src="image/Portfolio/material/panda_motion_control/panda_climbing.MP4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div style="margin-top:0.7rem; font-size:1rem; color:#25477D; text-align:center;">Panda robot climbing with learned RL policy</div>
+                        </div>
+                        <div class="section-body" style="width:49%; min-width:280px; display:flex; flex-direction:column; justify-content:center;">
+                            The climbing behavior showcases the robot's ability to coordinate its limbs and apply appropriate forces to ascend a tree trunk. Through reinforcement learning, the robot learns to maintain contact with the trunk while managing balance and momentum, resulting in effective climbing that adapts to different trunk diameters and surface conditions.
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="section-body" style="width:100%; margin-top:1.5rem; text-align:left;">
+                        <b>As the next step, the perception system will be integrated onto the Panda robot platform, where it will be tested in real-world tree-climbing tasks to validate its effectiveness in guiding the robot toward a target trunk and supporting autonomous climbing behavior.</b>
+                </div> -->
+        </div>
+
+        <div class="section-block">
+            <div class="section-title">🐼 Overview</div>
+            <div class="section-body">
+                The Panda Motion Control module leverages <span style="color: #1a3a5c; font-weight: 700;">Reinforcement Learning (RL)</span> to enable the robot to learn complex locomotion and manipulation behaviors autonomously. 
+                By combining RL with physics-based simulation and real-world transfer, the system learns efficient motion primitives that generalize across tasks. This approach eliminates the need for hand-crafted controllers, allowing the Panda platform to autonomously discover effective solutions for complex robotic challenges.
+            </div>
+        </div>
+        <div class="section-block">
+            <div class="section-title">⚡ Challenge</div>
+            <div class="section-body">
+                <ul style="padding-left:1.2rem;">
+                    <li><span style="color: #1a3a5c; font-weight: 600; font-size: 1.3rem;">Autonomous Locomotion:</span> Train the robot to walk and navigate across diverse terrain through learned policies, adapting to environmental dynamics in real time.</li>
+                    <li><span style="color: #1a3a5c; font-weight: 600; font-size: 1.3rem;">Tree Climbing:</span> Develop specialized climbing behaviors that allow the robot to ascend tree trunks using learned limb coordination and force control strategies.</li>
+                    <li><span style="color: #1a3a5c; font-weight: 600; font-size: 1.3rem;">Human Interaction:</span> Enable safe and intuitive interactions with humans through contact-aware control policies that respond appropriately to external forces and gestures.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="section-block">
+            <div class="section-title">🚀 Action</div>
+            <div class="action-blocks" style="flex-direction: column; gap: 1.2rem;">
+                <div class="action-sub-block mb-3">
+                    <div class="action-sub-title">🧩 Fune Tune Simulation Model </div>
+                    <div class="section-body">
+                    </div>
+                    <!-- Introduction -->
+                    <div class="mt-4" style="width:100%;">
+                        <div style="background:#fff; border-radius:12px; padding:1rem 1.25rem; border:1px solid #e6eef8; box-shadow:0 1px 4px rgba(0,0,0,0.02);">
+                            <div style="font-weight:700; color:#1a3a5c; font-size:1.25rem; margin-bottom:0.5rem;">Introduction</div>
+                            <div style="color:#333; line-height:1.6; font-size:1.2rem;">
+                                To ensure efficient and reliable deployment, the robot’s behavior in simulation must closely resemble its physical behavior in the real world. Instead of pursuing perfect physical accuracy, the goal is to achieve behavioral similarity — meaning the robot should respond to commands and environmental interactions in a comparable way across both domains.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Simulation Test -->
+                    <div class="test-row mt-4" style="width:100%;">
+                        <!-- Left column: Drop Test -->
+                        <div class="test-left mb-3">
+                            <div style="background:#f8f9fa; border-radius:12px; padding:0.85rem;">
+                                <div style="font-size:1.2rem; font-weight:600; color:#1a3a5c; margin-bottom:0.6rem;">(1) Drop Test</div>
+                                <div class="w-100 d-flex justify-content-center demo-video-wrapper">
+                                    <video controls autoplay muted playsinline loop class="demo-video" style="display:block; max-width:620px;">
+                                        <source src="image/Portfolio/material/panda_motion_control/Drop_Test.mp4" type="video/webm">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                <div style="margin-top:0.9rem; background:#f0f4f8; border-left:4px solid #25477D; padding:0.9rem; border-radius:6px;">
+                                    <div style="font-weight:600; color:#1a3a5c; margin-bottom:0.25rem;">Test description</div>
+                                    <div style="color:#333; line-height:1.5;">
+                                        A scripted drop (fixed height) is used to measure impact response and settling. Compare peak acceleration, bounce, and settling time between simulation and real robot to guide inertia and contact parameter adjustments.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right column: Arm Drop Test -->
+                        <div class="test-right mb-3">
+                            <div style="background:#f8f9fa; border-radius:12px; padding:0.85rem; display:flex; flex-direction:column;">
+                                <div style="font-size:1.2rem; font-weight:600; color:#1a3a5c; margin-bottom:0.6rem;">(2) Arm Drop Test</div>
+                                <div class="d-flex arm-videos" style="gap:0.6rem; flex-wrap:wrap; margin-bottom:0.6rem;">
+                                    <div class="demo-video-wrapper" style="flex: 1 1 48%;">
+                                        <video controls autoplay muted playsinline loop class="demo-video small" style="display:block;">
+                                            <source src="/image/Portfolio/material/panda_motion_control/ArmDrop_Real.mp4" type="video/webm">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>
+                                    <div class="demo-video-wrapper" style="flex: 1 1 48%;">
+                                        <video controls autoplay muted playsinline loop class="demo-video small" style="display:block; ">
+                                            <source src="/image/Portfolio/material/panda_motion_control/ArmDrop_Robot.mp4" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>
+                                </div>
+                                <div style="margin-top:auto; background:#f0f4f8; border-left:4px solid #95a5a6; padding:0.85rem; border-radius:6px;">
+                                    <div style="font-weight:600; color:#555; margin-bottom:0.25rem;">Test description</div>
+                                    <div style="color:#333; line-height:1.5;">
+                                        Arm drop tests focus on joint-level impact and compliance. Use these runs to tune joint stiffness and damping so that joint transient responses match the hardware (rise/settle times and overshoot), rather than matching exact numeric values.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Low Level Control -->
+                <div class="action-sub-block mb-3">
+                    <div class="action-sub-title">🧩 Low Level Control</div>
+                    <div class="section-body">
+                    </div>
+                    <!-- Low-Level Policy Training  -->
+                    <div class="mt-4" style="width:100%;">
+                        <!-- Low-Level Policy Training Objective -->
+                        <div style="background:#fff; border-radius:12px; padding:1rem 1.25rem; border:1px solid #e6eef8; box-shadow:0 1px 4px rgba(0,0,0,0.02);">
+                            <div style="font-weight:700; color:#1a3a5c; font-size:1.25rem; margin-bottom:0.5rem;">Training Objective</div>
+                            <div style="color:#333; line-height:1.6; font-size:1.15rem;">
+                                The goal of the low-level policy is to perform precise and stable position control for the leg's end-effector. In this training setup, the policy is responsible for driving all joint motors so that the foot can accurately reach the commanded target position in task space. The entire training process is designed to ensure that, given a desired end-effector position, the policy can consistently generate smooth and reliable joint-position commands that track the target without jitter or instability.
+                            </div>
+                        </div>
+                        <!-- Training Setup -->
+                        <div style="background:#fff; border-radius:12px; padding:1rem 1.25rem; border:1px solid #e6eef8; box-shadow:0 1px 4px rgba(0,0,0,0.02);">
+                            <!-- <div style="font-weight:700; color:#1a3a5c; font-size:1.25rem; margin-bottom:0.8rem;">Training Setup</div> -->
+                            
+                            <div style="display:flex; gap:2rem; width:100%;">
+                                <!-- Left column: Observations -->
+                                <div style="flex: 1;">
+                                    <div style="font-weight:600; color:#1a3a5c; font-size:1.1rem; margin-bottom:0.5rem;">Observations (obs):</div>
+                                    <ul style="padding-left:1.5rem; margin:0; color:#333; line-height:1.6; font-size:1.05rem;">
+                                        <li><span style="font-family:monospace; background:#f5f5f5; padding:0.2rem 0.4rem; border-radius:3px;">joint_pos</span> — current joint angles</li>
+                                        <li><span style="font-family:monospace; background:#f5f5f5; padding:0.2rem 0.4rem; border-radius:3px;">joint_vel</span> — joint angular velocities</li>
+                                        <li><span style="font-family:monospace; background:#f5f5f5; padding:0.2rem 0.4rem; border-radius:3px;">pose_command</span> — target foot position in task space</li>
+                                        <li><span style="font-family:monospace; background:#f5f5f5; padding:0.2rem 0.4rem; border-radius:3px;">last_actions</span> — previous joint commands for smoothness and stability</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Right column: Actions & Commands -->
+                                <div style="flex: 1;">
+                                    <div style="margin-bottom:1.2rem;">
+                                        <div style="font-weight:600; color:#1a3a5c; font-size:1.1rem; margin-bottom:0.5rem;">Actions:</div>
+                                        <ul style="padding-left:1.5rem; margin:0; color:#333; line-height:1.6; font-size:1.05rem;">
+                                            <li>Joint position targets for <span style="font-weight:600;">all leg motors</span> (joint position control)</li>
+                                        </ul>
+                                    </div>
+
+                                    <div>
+                                        <div style="font-weight:600; color:#1a3a5c; font-size:1.1rem; margin-bottom:0.5rem;">Commands:</div>
+                                        <ul style="padding-left:1.5rem; margin:0; color:#333; line-height:1.6; font-size:1.05rem;">
+                                            <li>End-effector (foot) position in 3D space (Relative to the Shoulder Part) </li>
+                                            <!-- <li style="font-style:italic; color:#555; margin-top:0.3rem;">(this is the primary control objective of the low-level policy)</li> -->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Issues and Solutions Table -->
+                        <div style="background:#fff; border-radius:12px; padding:1.25rem; border:1px solid #e6eef8; box-shadow:0 1px 4px rgba(0,0,0,0.02); margin-top:1.5rem;">
+                            <div style="font-weight:700; color:#1a3a5c; font-size:1.5rem; margin-bottom:1rem;">Issues and Solutions</div>
+                            <table style="width:100%; border-collapse:collapse;">
+                                <thead>
+                                    <tr style="border-bottom:2px solid #25477D; background-color:#f8f9fa;">
+                                        <th style="padding:0.9rem 1rem; text-align:left; font-weight:700; color:#25477D; font-size:1.3rem;">Encountered Issue</th>
+                                        <th style="padding:0.9rem 1rem; text-align:left; font-weight:700; color:#25477D; font-size:1.3rem;">Solution Implemented</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="border-bottom:1px solid #e6eef8;">
+                                        <td style="padding:1rem; color:#333; line-height:1.6; font-size:1.2rem;">End-effector constrained to always face downward, limiting natural motion</td>
+                                        <td style="padding:1rem; color:#333; line-height:1.6; font-size:1.2rem;">Removed the orientation constraint and widened joint range of motion</td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid #e6eef8;">
+                                        <td style="padding:1rem; color:#333; line-height:1.6; font-size:1.2rem;">Full Panda USD model caused unnecessary restrictions and reduced leg flexibility</td>
+                                        <td style="padding:1rem; color:#333; line-height:1.6; font-size:1.2rem;">Simplified USD to a single-arm model for focused training</td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid #e6eef8;">
+                                        <td style="padding:1rem; color:#333; line-height:1.6; font-size:1.2rem;">Removing the orientation reward caused the end-effector to rotate freely (position reached but pose uncontrolled)</td>
+                                        <td style="padding:1rem; color:#333; line-height:1.6; font-size:1.2rem;">Reintroduced orientation tracking reward and expanded allowable Euler command range</td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid #e6eef8;">
+                                        <td style="padding:1rem; color:#333; line-height:1.6; font-size:1.2rem;">Increasing number of environments resulted in jitter and longer training without performance gain</td>
+                                        <td style="padding:1rem; color:#333; line-height:1.6; font-size:1.2rem;">Reduced number of environments to maintain stability and shorten training time</td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid #e6eef8;">
+                                        <td style="padding:1rem; color:#333; line-height:1.6; font-size:1.2rem;">Early and heavy penalties on <span style="font-family:monospace; background:#f5f5f5; padding:0.2rem 0.4rem; border-radius:3px;">action_rate</span> and <span style="font-family:monospace; background:#f5f5f5; padding:0.2rem 0.4rem; border-radius:3px;">joint_vel</span> suppressed exploration and caused unstable behavior</td>
+                                        <td style="padding:1rem; color:#333; line-height:1.6; font-size:1.2rem;">Introduced curriculum to gradually increase penalties and tuned reward weights</td>
+                                    </tr>
+                                    <tr style="border-bottom:1px solid #e6eef8;">
+                                        <td style="padding:1rem; color:#333; line-height:1.6; font-size:1.2rem;">Joint motion became unstable and noisy under improper penalty scaling</td>
+                                        <td style="padding:1rem; color:#333; line-height:1.6; font-size:1.2rem;">Rebalanced penalty terms and progressively adjusted them through curriculum</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- Model Results Summary -->
+                        <div style="background:#fff; border-radius:12px; padding:1.25rem; border:1px solid #e6eef8; box-shadow:0 1px 4px rgba(0,0,0,0.02); margin-top:1.5rem;">
+                            <div style="font-weight:700; color:#1a3a5c; font-size:1.5rem; margin-bottom:1rem;">Model Results Summary</div>
+                            <ul style="padding-left:0; margin:0; color:#333; line-height:1.8; font-size:1.2rem; list-style:none;">
+                                <li style="margin-bottom:1.0rem;">• The model demonstrates <span style="font-weight:600;">stable and smooth joint motions</span>, with minimal jitter during control.</li>
+                                <li style="margin-bottom:1.0rem;">• <span style="font-weight:600;">End-effector tracking (position & orientation)</span> remains within a consistent and narrow range, indicating reliable task-space control.</li>
+                                <li style="margin-bottom:1.0rem;">• The <span style="font-weight:600;">action rate reward decreases and stabilizes</span>, showing smoother and less abrupt motor commands.</li>
+                                <li style="margin-bottom:1.0rem;">• <span style="font-weight:600;">Joint velocity behavior improves over time</span>, reflecting better regulation of joint motion.</li>
+                                <li style="margin-bottom:1.0rem;">• <span style="font-weight:600;">Entropy converges to a stable plateau</span>, meaning the policy has transitioned from exploration to a confident, stable solution.</li>
+                                <li style="margin-bottom:1.0rem;">• <span style="font-weight:600;">Mean reward becomes more consistent</span> as training progresses, showing the model has found a reliable strategy for position tracking.</li>
+                            </ul>
+                        </div>
+                        <!-- Results Visualization Section -->
+                        <div style="background:#fff; border-radius:12px; padding:1.25rem; border:1px solid #e6eef8; box-shadow:0 1px 4px rgba(0,0,0,0.02); margin-top:1.5rem;">
+                            <div style="font-weight:700; color:#1a3a5c; font-size:1.5rem; margin-bottom:1rem;">Results Visualization</div>
+                            <div style="display:flex; gap:2rem; width:100%;">
+                                <!-- Left side: Image -->
+                                <div style="flex: 1; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+                                    <img src="/image/Portfolio/material/panda_motion_control/LL_Model_Training.png" alt="Results visualization" style="width:100%; max-width:100%; height:auto; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#f8f9fa;">
+                                    <div style="margin-top:0.7rem; font-size:1.05rem; color:#25477D; text-align:center;">Training metrics and performance plots</div>
+                                </div>
+                                <!-- Right side: Video -->
+                                <div style="flex: 1; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+                                    <video controls autoplay muted playsinline loop style="width:100%; height:auto; max-height:400px; object-fit:contain; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#f8f9fa;">
+                                        <source src="/image/Portfolio/material/panda_motion_control/ll_model_training.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <div style="margin-top:0.7rem; font-size:1.05rem; color:#25477D; text-align:center;">Real-time demonstration of learned policy</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="action-sub-block">
+                    <div class="action-sub-title">🧭 High Level Control <span style="font-size:0.95rem; background:#f8f9fa; color:#c92a2abd; padding:0.4rem 1rem; border:2px solid lab(44.58% 60.67 40.23 / 0.685); border-radius:20px; font-weight:600; margin-left:auto;">Ongoing</span></div>
+                    <div class="mt-4" style="width:100%;">
+                        <div style="background:#fff; border-radius:12px; padding:1rem 1.25rem; border:1px solid #e6eef8; box-shadow:0 1px 4px rgba(0,0,0,0.02);">
+                            <div style="font-weight:700; color:#1a3a5c; font-size:1.2rem; margin-bottom:0.5rem;">Introduction</div>
+                            <div style="color:#333; line-height:1.6;">
+                                To ensure efficient and reliable deployment, the robot’s behavior in simulation must closely resemble its physical behavior in the real world. Instead of pursuing perfect physical accuracy, the goal is to achieve behavioral similarity — meaning the robot should respond to commands and environmental interactions in a comparable way across both domains.
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <!-- Row 1
+                    <div class="d-flex flex-row justify-content-between align-items-start mb-3" style="width:100%; gap:2.5rem;">
+                        <div style="width:49%; min-width:280px; display:flex; flex-direction:column; align-items:center;">
+                            <video controls autoplay muted playsinline style="width:100%; height:320px; object-fit:contain; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#f8f9fa;">
+                                <source src="image/Portfolio/material/panda_perception/TreeTrunk_Alignment.webm" type="video/webm">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div style="width:49%; min-width:280px; display:flex; flex-direction:column; align-items:center;">
+                            <video controls autoplay muted playsinline style="width:100%; height:320px; object-fit:contain; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#f8f9fa;">
+                                <source src="image/Portfolio/material/panda_perception/Visual_Odometry_DEMO.webm" type="video/webm">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div> -->
+                    <!-- <div class="section-body" style="margin-bottom:2.2rem; text-align:center;">
+                        Initially, I used ICP for frame-to-frame alignment. As shown in the right video, this method can roughly indicate the relative position between the tree and the camera, but the trunk’s position is not stable. This demonstrates that the ICP-based approach is not robust in practice.                    </div> -->
+                    <!-- Divider -->
+                    <!-- <hr style="border-top: 2px dashed #161616; margin: 2.2rem 0;"> -->
+
+                    <!-- Row 2 -->
+                    <!-- <div class="d-flex flex-row justify-content-between align-items-start mb-3" style="width:100%; gap:2.5rem;">
+                        <div style="width:49%; min-width:280px; display:flex; flex-direction:column; align-items:center;">
+                            <video controls autoplay muted playsinline style="width:100%; height:320px; object-fit:contain; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#f8f9fa;">
+                                <source src="image/Portfolio/material/panda_perception/VSLAM_Demo.webm" type="video/webm">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div style="width:49%; min-width:280px; display:flex; flex-direction:column; align-items:center;">
+                            <video controls autoplay muted playsinline style="width:100%; height:320px; object-fit:contain; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#f8f9fa;">
+                                <source src="image/Portfolio/material/panda_perception/VSLAM_Demo1.mp4" type="video/webm">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                    <div class="section-body" style="margin-bottom:2.2rem; text-align:center;">
+                        Here, I replaced visual odometry with VSLAM. Unlike ICP-based alignment, VSLAM leverages spatial feature points to estimate the robot’s current pose more robustly. The left video shows the camera pose output from the VSLAM module, while the right video demonstrates a path movement test.
+                    </div> -->
+                <!-- END: Two-row video block -->
+                </div>
+            </div>
+        </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.js"></script>
+</body>
+</html>

@@ -89,10 +89,10 @@
             <div class="section-title">⚡ Challenge</div>
             <div class="section-body">
                 <ul style="padding-left:1.2rem;">
-                    <li>Tree Trunk Detection: The system must reliably detect tree trunks in outdoor environments with varying light and background conditions.</li>
-                    <li>Relative Visual Localization: The robot needs to estimate its relative position and orientation with respect to the tree trunk for precise navigation.</li>
-                    <li>Stable Reference Target: The trunk must be treated as a fixed target in the environment, ensuring the robot can use it as a consistent climbing anchor.</li>
-                    <li>Onboard Deployment: The entire perception pipeline must run in real time on the NVIDIA Jetson Orin Nano, a resource-constrained edge device.</li>
+                    <li><span style="color: #1a3a5c; font-weight: 700; font-size: 1.08rem;">Tree Trunk Detection</span>: The system must reliably detect tree trunks in outdoor environments with varying light and background conditions.</li>
+                    <li><span style="color: #1a3a5c; font-weight: 700; font-size: 1.08rem;">Relative Visual Localization</span>: The robot needs to estimate its relative position and orientation with respect to the tree trunk for precise navigation.</li>
+                    <li><span style="color: #1a3a5c; font-weight: 700; font-size: 1.08rem;">Stable Reference Target</span>: The trunk must be treated as a fixed target in the environment, ensuring the robot can use it as a consistent climbing anchor.</li>
+                    <li><span style="color: #1a3a5c; font-weight: 700; font-size: 1.08rem;">Onboard Deployment</span>: The entire perception pipeline must run in real time on the NVIDIA Jetson Orin Nano, a resource-constrained edge device.</li>
                 </ul>
             </div>
         </div>
@@ -110,7 +110,7 @@
                                 <div style="margin-top:0.7rem; font-size:1rem; color:#25477D; text-align:center;">YOLOv8 training metrics: precision vs recall and mAP</div>
                             </div>
                             <div style="width:49%; min-width:280px; display:flex; flex-direction:column; align-items:center;">
-                                <video controls style="width:100%; height:320px; object-fit:contain; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#f8f9fa;">
+                                <video controls muted autoplay playsinline preload="auto" loop style="width:100%; height:320px; object-fit:contain; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#f8f9fa;">
                                     <source src="image/Portfolio/material/panda_perception/Auto_Label_System.webm" type="video/webm">
                                     Your browser does not support the video tag.
                                 </video>
@@ -127,13 +127,13 @@
                     <!-- Row 1 -->
                     <div class="d-flex flex-row justify-content-between align-items-start mb-3" style="width:100%; gap:2.5rem;">
                         <div style="width:49%; min-width:280px; display:flex; flex-direction:column; align-items:center;">
-                            <video controls style="width:100%; height:320px; object-fit:contain; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#f8f9fa;">
+                            <video controls muted autoplay playsinline preload="auto" loop style="width:100%; height:320px; object-fit:contain; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#f8f9fa;">
                                 <source src="image/Portfolio/material/panda_perception/TreeTrunk_Alignment.webm" type="video/webm">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
                         <div style="width:49%; min-width:280px; display:flex; flex-direction:column; align-items:center;">
-                            <video controls style="width:100%; height:320px; object-fit:contain; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#f8f9fa;">
+                            <video controls muted autoplay playsinline preload="auto" loop style="width:100%; height:320px; object-fit:contain; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#f8f9fa;">
                                 <source src="image/Portfolio/material/panda_perception/Visual_Odometry_DEMO.webm" type="video/webm">
                                 Your browser does not support the video tag.
                             </video>
@@ -147,13 +147,13 @@
                     <!-- Row 2 -->
                     <div class="d-flex flex-row justify-content-between align-items-start mb-3" style="width:100%; gap:2.5rem;">
                         <div style="width:49%; min-width:280px; display:flex; flex-direction:column; align-items:center;">
-                            <video controls style="width:100%; height:320px; object-fit:contain; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#f8f9fa;">
+                            <video controls muted autoplay playsinline preload="auto" loop style="width:100%; height:320px; object-fit:contain; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#f8f9fa;">
                                 <source src="image/Portfolio/material/panda_perception/VSLAM_Demo.webm" type="video/webm">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
                         <div style="width:49%; min-width:280px; display:flex; flex-direction:column; align-items:center;">
-                            <video controls style="width:100%; height:320px; object-fit:contain; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#f8f9fa;">
+                            <video controls muted autoplay playsinline preload="auto" loop style="width:100%; height:320px; object-fit:contain; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#f8f9fa;">
                                 <source src="image/Portfolio/material/panda_perception/VSLAM_Demo1.mp4" type="video/webm">
                                 Your browser does not support the video tag.
                             </video>
@@ -173,7 +173,7 @@
                         We successfully deployed the Panda Perception pipeline on the NVIDIA Jetson Orin Nano, achieving real-time performance with high detection accuracy and stable localization. The YOLOv8 model, accelerated through ONNX and onnxruntime-gpu, runs with low latency, while the integration of VSLAM ensures robust odometry even when the tree trunk is temporarily out of view. This demonstrates that the system can reliably detect tree trunks, estimate relative poses, and provide consistent localization in outdoor scenarios under limited computational resources.From the overall performance, we can observe that the system runs smoothly and the trunk detection is highly robust. The tree trunk consistently remains in the same position on the map, which provides a reliable reference for localization.<br><br>
                     </div>
                     <div style="width:49%; min-width:280px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
-                        <video controls style="width:100%; height:320px; object-fit:contain; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#f8f9fa;">
+                        <video controls muted autoplay playsinline preload="auto" loop style="width:100%; height:320px; object-fit:contain; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#f8f9fa;">
                             <source src="image/Portfolio/material/panda_perception/Panda_Perception_DEMO.webm" type="video/webm">
                             Your browser does not support the video tag.
                         </video>
@@ -186,5 +186,29 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.js"></script>
+    <script>
+        // Ensure videos are muted and attempt to play them to satisfy autoplay policies
+        document.addEventListener('DOMContentLoaded', function() {
+            const vids = document.querySelectorAll('video');
+            vids.forEach(v => {
+                try {
+                    // set attributes for broad compatibility
+                    v.muted = true;
+                    v.setAttribute('muted', '');
+                    v.setAttribute('playsinline', '');
+                    v.setAttribute('preload', 'auto');
+                    v.setAttribute('autoplay', '');
+                    const playPromise = v.play();
+                    if (playPromise !== undefined) {
+                        playPromise.catch(() => {
+                            /* Autoplay was prevented by the browser; sound will remain off until user interaction */
+                        });
+                    }
+                } catch (e) {
+                    // ignore
+                }
+            });
+        });
+    </script>
 </body>
 </html>

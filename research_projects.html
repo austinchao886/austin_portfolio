@@ -99,7 +99,7 @@
         <h2 class="fw-bold mb-4" style="color:#25477D;">Work:</h2>
         <!-- Panda Motion Control -->
         <div class="rp-card">
-            <img src="image/Portfolio/Panda_MotionControl.jpg" alt="Work Example">
+            <img src="image/Portfolio/Panda_motioncontrol.png" alt="Work Example">
             <div class="rp-card-content">
                 <div style="display: flex; justify-content: space-between; align-items: flex-start;">
                     <div class="rp-card-title">Panda Robot - Motion Control</div>
@@ -109,13 +109,27 @@
                     </div>
                 </div>
                 <div class="rp-card-sub">Industrial Technology Research Institute (ITRI), Mechanical and Mechatronics Systems Research Lab. </div>
-                <ul class="rp-card-list">
-                    <li>Developed perception algorithms for a collaborative robot using computer vision and sensor fusion.</li>
-                    <li>Integrated ROS2 nodes for real-time data processing and feedback.</li>
+                 <ul class="rp-card-list">
+                    <li style="display:flex; align-items:center; margin-bottom:0.7rem;">
+                        <span style="display:inline-block; width:7px; height:7px; background:#25477D; border-radius:50%; margin-right:0.8rem;"></span>
+                        <span style="font-weight:600; color:#25477D;">Reinforcement learning–based motion control policies were developed in Isaac Lab to enable climbing and walking behaviors for the Panda-inspired bionic robot.</span>
+                    </li>
+                    <li style="display:flex; align-items:center; margin-bottom:0.7rem;">
+                        <span style="display:inline-block; width:7px; height:7px; background:#25477D; border-radius:50%; margin-right:0.8rem;"></span>
+                        <span style="font-weight:600; color:#25477D;">Single-leg motion policies were trained by specifying end-effector targets to simplify reward accumulation and improve training stability.</span>
+                    </li>
+                    <li style="display:flex; align-items:center; margin-bottom:0.7rem;">
+                        <span style="display:inline-block; width:7px; height:7px; background:#25477D; border-radius:50%; margin-right:0.8rem;"></span>
+                        <span style="font-weight:600; color:#25477D;">A hierarchical control framework was designed, where high-level policies coordinate full-body movement and low-level policies control individual leg motions.</span>
+                    </li>
+                    <li style="display:flex; align-items:center; margin-bottom:0.7rem;">
+                        <span style="display:inline-block; width:7px; height:7px; background:#25477D; border-radius:50%; margin-right:0.8rem;"></span>
+                        <span style="font-weight:600; color:#25477D;">Trained policies were deployed on the physical robot via LCM for real-time execution, achieving stable and natural leg motion control.</span>
+                    </li>
                 </ul>
                 <div class="rp-card-btns">
                     <!-- <a href="#" class="btn">Demo video</a> -->
-                    <a href="#" class="btn">Webpage</a>
+                    <a href="panda_motion_control.html" class="btn">Webpage</a>
                 </div>
             </div>
         </div>
@@ -217,9 +231,12 @@
                     </li>
                 </ul>
                 <div class="rp-card-btns">
-                    <a href="#" class="btn">Demo video</a>
+                    <!-- <a href="#" class="btn">Demo video</a> -->
                     <a href="#" class="btn">Research Report</a>
                     <a href="https://github.com/austinchao886/autonomous_mobile_car" class="btn">GitHub Repo</a>
+                    <a href="https://github.com/austinchao886/nav2_autonomous_exploration" class="btn">Algorithm1 Repo</a>
+                    <a href="https://github.com/austinchao886/nav2_rrt_star_plugin" class="btn">Algorithm2 Repo</a>
+
                 </div>
             </div>
         </div>
@@ -283,7 +300,8 @@
                 </ul>
                 <div class="rp-card-btns">
                     <a href="https://tie.twtm.com.tw/zh-tw/exhibition-detail/5505" class="btn">Official Web Page</a>
-                    <!-- <a href="research_file/Capstone%20Project_%20Development%20of%20a%20Frisbee-Launching%20Mobile%20Robot.pdf" class="btn" target="_blank">Research Report</a> -->
+                    <a href="https://github.com/austinchao886/isaac_lab_rl" class="btn" target="_blank">GitHub Repo</a>
+                    <a href="https://www.youtube.com/watch?v=9fzXiB_ehGY" class="btn" target="_blank">Demo Video</a>
                 </div>
             </div>
         </div>

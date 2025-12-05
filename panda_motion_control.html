@@ -96,7 +96,7 @@
     <div class="container py-5">
         <a href="research_projects.html" class="back-btn"><i class="bi bi-arrow-left"></i> back to Research &amp; Project</a>
         <div class="section-block">
-            <div class="section-title">Log</div>
+            <div class="section-title">📝 Log</div>
             <div class="section-body" style="display:flex; gap:2rem; flex-wrap:wrap;">
                 <!-- Left column: info blocks -->
                 <div style="flex: 1 1 60%; min-width:280px; max-width:50%; display:flex; flex-direction:column; gap:1rem;">
@@ -131,7 +131,7 @@
         </div>
 
         <div class="section-block">
-            <div class="section-title">🎯 Video Demo</div>
+            <div class="section-title">🎬 Video Demo</div>
                 
                 <!-- Walking Demo Section -->
                 <div style="margin-bottom: 2rem;">
@@ -156,26 +156,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Climbing Demo Section -->
-                <!-- <div style="margin-bottom: 1rem;">
-                    <div style="font-size: 1.5rem; font-weight: 600; color: #1a3a5c; margin-bottom: 1rem;">🌲 Tree Climbing Demo</div>
-                    <div class="d-flex flex-row justify-content-between align-items-stretch" style="gap:2.5rem; width:100%;">
-                        <div style="width:49%; min-width:280px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
-                            <video controls autoplay muted playsinline style="width:100%; height:auto; object-fit:contain; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#f8f9fa;">
-                                <source src="image/Portfolio/material/panda_motion_control/panda_climbing.MP4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <div style="margin-top:0.7rem; font-size:1rem; color:#25477D; text-align:center;">Panda robot climbing with learned RL policy</div>
-                        </div>
-                        <div class="section-body" style="width:49%; min-width:280px; display:flex; flex-direction:column; justify-content:center;">
-                            The climbing behavior showcases the robot's ability to coordinate its limbs and apply appropriate forces to ascend a tree trunk. Through reinforcement learning, the robot learns to maintain contact with the trunk while managing balance and momentum, resulting in effective climbing that adapts to different trunk diameters and surface conditions.
-                        </div>
-                    </div>
-                </div> -->
-                <!-- <div class="section-body" style="width:100%; margin-top:1.5rem; text-align:left;">
-                        <b>As the next step, the perception system will be integrated onto the Panda robot platform, where it will be tested in real-world tree-climbing tasks to validate its effectiveness in guiding the robot toward a target trunk and supporting autonomous climbing behavior.</b>
-                </div> -->
         </div>
 
         <div class="section-block">
@@ -262,7 +242,7 @@
                 </div>
                 <!-- Low Level Control -->
                 <div class="action-sub-block mb-3">
-                    <div class="action-sub-title">🧩 Low Level Control</div>
+                    <div class="action-sub-title">🕹️ Low Level Control</div>
                     <div class="section-body">
                     </div>
                     <!-- Low-Level Policy Training  -->
@@ -384,52 +364,118 @@
                     <div class="action-sub-title">🧭 High Level Control <span style="font-size:0.95rem; background:#f8f9fa; color:#c92a2abd; padding:0.4rem 1rem; border:2px solid lab(44.58% 60.67 40.23 / 0.685); border-radius:20px; font-weight:600; margin-left:auto;">Ongoing</span></div>
                     <div class="mt-4" style="width:100%;">
                         <div style="background:#fff; border-radius:12px; padding:1rem 1.25rem; border:1px solid #e6eef8; box-shadow:0 1px 4px rgba(0,0,0,0.02);">
-                            <div style="font-weight:700; color:#1a3a5c; font-size:1.2rem; margin-bottom:0.5rem;">Introduction</div>
+                            <div style="font-weight:700; color:#1a3a5c; font-size:1.5rem; margin-bottom:0.5rem;">Training Objective</div>
                             <div style="color:#333; line-height:1.6;">
                                 To ensure efficient and reliable deployment, the robot’s behavior in simulation must closely resemble its physical behavior in the real world. Instead of pursuing perfect physical accuracy, the goal is to achieve behavioral similarity — meaning the robot should respond to commands and environmental interactions in a comparable way across both domains.
                             </div>
                         </div>
                     </div>
-                    <br><br>
-                    <!-- Row 1
-                    <div class="d-flex flex-row justify-content-between align-items-start mb-3" style="width:100%; gap:2.5rem;">
-                        <div style="width:49%; min-width:280px; display:flex; flex-direction:column; align-items:center;">
-                            <video controls autoplay muted playsinline style="width:100%; height:320px; object-fit:contain; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#f8f9fa;">
-                                <source src="image/Portfolio/material/panda_perception/TreeTrunk_Alignment.webm" type="video/webm">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                        <div style="width:49%; min-width:280px; display:flex; flex-direction:column; align-items:center;">
-                            <video controls autoplay muted playsinline style="width:100%; height:320px; object-fit:contain; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#f8f9fa;">
-                                <source src="image/Portfolio/material/panda_perception/Visual_Odometry_DEMO.webm" type="video/webm">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    </div> -->
-                    <!-- <div class="section-body" style="margin-bottom:2.2rem; text-align:center;">
-                        Initially, I used ICP for frame-to-frame alignment. As shown in the right video, this method can roughly indicate the relative position between the tree and the camera, but the trunk’s position is not stable. This demonstrates that the ICP-based approach is not robust in practice.                    </div> -->
-                    <!-- Divider -->
-                    <!-- <hr style="border-top: 2px dashed #161616; margin: 2.2rem 0;"> -->
+                    <!-- <br><br> -->
+                    <!-- Training Setup -->
+                    <div style="background:#fff; border-radius:12px; padding:1rem 1.25rem; border:1px solid #e6eef8; box-shadow:0 1px 4px rgba(0,0,0,0.02);">
+                        <!-- <div style="font-weight:700; color:#1a3a5c; font-size:1.25rem; margin-bottom:0.8rem;">Training Setup</div> -->
+                        
+                        <div style="display:flex; gap:2rem; width:100%;">
+                            <!-- Left column: Observations -->
+                            <div style="flex: 1;">
+                                <div style="font-weight:600; color:#1a3a5c; font-size:1.1rem; margin-bottom:0.5rem;">Observations (obs):</div>
+                                <ul style="padding-left:1.5rem; margin:0; color:#333; line-height:1.6; font-size:1.05rem;">
+                                    <li><span style="font-family:monospace; background:#f5f5f5; padding:0.2rem 0.4rem; border-radius:3px;">base_lin_vel</span> — current robot linear velocity</li>
+                                    <li><span style="font-family:monospace; background:#f5f5f5; padding:0.2rem 0.4rem; border-radius:3px;">base_ang_vel</span> — current robot angular velocity</li>
+                                    <li><span style="font-family:monospace; background:#f5f5f5; padding:0.2rem 0.4rem; border-radius:3px;">projected_gravity</span> — robot base tiltness</li>
+                                    <li><span style="font-family:monospace; background:#f5f5f5; padding:0.2rem 0.4rem; border-radius:3px;">velocity_commands</span> — velocity command</li>
+                                    <li><span style="font-family:monospace; background:#f5f5f5; padding:0.2rem 0.4rem; border-radius:3px;">joint_pos</span> — current joint angles</li>
+                                    <li><span style="font-family:monospace; background:#f5f5f5; padding:0.2rem 0.4rem; border-radius:3px;">joint_vel</span> — joint angular velocities</li>
+                                    <li><span style="font-family:monospace; background:#f5f5f5; padding:0.2rem 0.4rem; border-radius:3px;">last_actions</span> — previous joint commands for smoothness and stability</li>
+                                </ul>
+                            </div>
 
-                    <!-- Row 2 -->
-                    <!-- <div class="d-flex flex-row justify-content-between align-items-start mb-3" style="width:100%; gap:2.5rem;">
-                        <div style="width:49%; min-width:280px; display:flex; flex-direction:column; align-items:center;">
-                            <video controls autoplay muted playsinline style="width:100%; height:320px; object-fit:contain; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#f8f9fa;">
-                                <source src="image/Portfolio/material/panda_perception/VSLAM_Demo.webm" type="video/webm">
-                                Your browser does not support the video tag.
-                            </video>
+                            <!-- Right column: Actions & Commands -->
+                            <div style="flex: 1;">
+                                <div style="margin-bottom:1.2rem;">
+                                    <div style="font-weight:600; color:#1a3a5c; font-size:1.1rem; margin-bottom:0.5rem;">Actions:</div>
+                                    <ul style="padding-left:1.5rem; margin:0; color:#333; line-height:1.6; font-size:1.05rem;">
+                                        <!-- <li>Joint position targets for <span style="font-weight:600;">all leg motors</span> (joint position control)</li> -->
+                                        <li>Four legs end-effector positions ➡︎ <b>Position + Quaternion</b></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <div style="font-weight:600; color:#1a3a5c; font-size:1.1rem; margin-bottom:0.5rem;">Commands:</div>
+                                    <ul style="padding-left:1.5rem; margin:0; color:#333; line-height:1.6; font-size:1.05rem;">
+                                        <li>Velocity Command ➡︎ <b>Full Robot Velocity</b></li>
+                                        <!-- <li style="font-style:italic; color:#555; margin-top:0.3rem;">(this is the primary control objective of the low-level policy)</li> -->
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <div style="width:49%; min-width:280px; display:flex; flex-direction:column; align-items:center;">
-                            <video controls autoplay muted playsinline style="width:100%; height:320px; object-fit:contain; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#f8f9fa;">
-                                <source src="image/Portfolio/material/panda_perception/VSLAM_Demo1.mp4" type="video/webm">
-                                Your browser does not support the video tag.
-                            </video>
+                        <!-- Notes -->
+                        <div style="background:#fff3cd; border-left:4px solid #ffc107; padding:0.9rem 1.2rem; border-radius:6px; margin-top:1rem;">
+                            <div style="color:#856404; line-height:1.6; font-size:1.05rem;">
+                                📝 <b>Note:</b> This demonstrates that the high-level policy needs to observe both whole-body information and low-level control information.
+                            </div>
+                        </div>
+                        <!-- Issues and Solutions Table -->
+                        <div style="background:#fff; border-radius:12px; padding:1.25rem; border:1px solid #e6eef8; box-shadow:0 1px 4px rgba(0,0,0,0.02); margin-top:1.5rem;">
+                            <div style="font-weight:700; color:#1a3a5c; font-size:1.5rem; margin-bottom:1rem;">Issues and Solutions</div>
+                            
+                            <!-- Problem Description -->
+                            <div style="margin-bottom:1.5rem;">
+                                <div style="color:#333; line-height:1.6; font-size:1.1rem; margin-bottom:1rem;">
+                                    I have identified a severe misalignment between the kinematic zero-point and the command zero-point, which significantly hinders learning:
+                                </div>
+                                <ul style="padding-left:2rem; margin:0 0 1rem 0; color:#333; line-height:1.8; font-size:1.1rem;">
+                                    <li style="margin-bottom:0.8rem;">
+                                        • <span style="font-weight:600;">Kinematic Zero-Point (The Good Stance):</span> When <span style="color:#d9534f; font-weight:600;">all actuators are assigned a position of zero</span>, the robot assumes a stable, vertical standing posture. This is the optimal physical reference pose for locomotion.
+                                    </li>
+                                    <li style="margin-bottom:0.8rem;">
+                                        • <span style="font-weight:600;">Command Zero-Point (The Bad Stance):</span> However, when the High-Level Policy <span style="color:#d9534f; font-weight:600;">commands a zero End-Effector target</span>, <span style="font-style:italic;">the Low-Level Policy (LLP) outputs a non-zero joint action</span> that results in the splayed, low-to-the-ground posture.
+                                    </li>
+                                </ul>
+                                <div style="background:#fff3cd; border-left:4px solid #ffc107; padding:1rem 1.2rem; border-radius:6px; margin-bottom:1rem;">
+                                    <div style="color:#856404; line-height:1.6; font-size:1.05rem;">
+                                        <span style="font-weight:600;">Implication:</span> The LLP's trained policy does not interpret <span style="font-weight:600;">End Effector Target</span> as <span style="font-style:italic;">"stay at the kinematic zero-point."</span> This means the High-Level Policy must learn a large, <span style="color:#d9534f; font-weight:600;">non-zero bias</span> just to get the robot into a starting position, drastically increasing the complexity of the exploration space and leading directly to the observed high entropy.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Two-column layout for images -->
+                            <div style="display:flex; gap:2rem; width:100%; margin-top:1rem;">
+                                <!-- Left: When All the Joints Position is at default -->
+                                <div style="flex: 1; display:flex; flex-direction:column; background:#f8f9fa; border-radius:8px; overflow:hidden;">
+                                    <img src="image/Portfolio/material/panda_motion_control/Action_bias.png" alt="When All the Joints Position is at default" style="width:100%; height:350px; object-fit:cover; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+                                    <div style="padding:1rem; text-align:center; font-weight:600; color:#1a3a5c; font-size:1.05rem;">
+                                        When All the Joints Position is at default
+                                    </div>
+                                </div>
+                                <!-- Right: When The End Effector is Assigned 0 -->
+                                <div style="flex: 1; display:flex; flex-direction:column; background:#f8f9fa; border-radius:8px; overflow:hidden;">
+                                    <img src="image/Portfolio/material/panda_motion_control/Action_bias2.png" alt="When The End Effector is Assigned 0" style="width:100%; height:350px; object-fit:cover; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+                                    <div style="padding:1rem; text-align:center; font-weight:600; color:#1a3a5c; font-size:1.05rem;">
+                                        When The End Effector is Assigned 0
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Results Visualization Section -->
+                        <div style="background:#fff; border-radius:12px; padding:1.25rem; border:1px solid #e6eef8; box-shadow:0 1px 4px rgba(0,0,0,0.02); margin-top:1.5rem;">
+                            <div style="font-weight:700; color:#1a3a5c; font-size:1.5rem; margin-bottom:1rem;">Results Visualization</div>
+                            <div style="display:flex; gap:2rem; width:100%;">
+                                <!-- Left side: Image -->
+                                <div style="flex: 1; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+                                    <img src="image/Portfolio/material/panda_motion_control/high_level_result.png" alt="Results visualization" style="width:100%; max-width:100%; height:auto; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#f8f9fa;">
+                                    <div style="margin-top:0.7rem; font-size:1.05rem; color:#25477D; text-align:center;">Training metrics and performance plots</div>
+                                </div>
+                                <!-- Right side: Video -->
+                                <div style="flex: 1; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+                                    <video controls autoplay muted playsinline loop style="width:100%; height:auto; max-height:400px; object-fit:contain; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#f8f9fa;" onloadedmetadata="this.playbackRate = 0.75;">
+                                        <source src="image/Portfolio/material/panda_motion_control/Panda_walk_RL.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    <div style="margin-top:0.7rem; font-size:1.05rem; color:#25477D; text-align:center;">Real-time demonstration of learned policy</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="section-body" style="margin-bottom:2.2rem; text-align:center;">
-                        Here, I replaced visual odometry with VSLAM. Unlike ICP-based alignment, VSLAM leverages spatial feature points to estimate the robot’s current pose more robustly. The left video shows the camera pose output from the VSLAM module, while the right video demonstrates a path movement test.
-                    </div> -->
-                <!-- END: Two-row video block -->
                 </div>
             </div>
         </div>

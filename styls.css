@@ -748,3 +748,36 @@ footer ul li:hover a{
     max-height: 300px;
   }
 }
+
+/* Responsive fixes to prevent mobile layout crashes */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden; /* prevent horizontal scrolling caused by overflow */
+}
+
+/* Ensure images never overflow their containers */
+img, .img-fluid, .about-portrait, .pf-img img, .collapse-inner img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Allow flex children to shrink below previous min-widths on small screens */
+.about-img-col, .about-info-col {
+    min-width: 0; /* allow the columns to shrink inside flex containers */
+}
+
+/* Scale large section headings and titles on small screens */
+.title-text {
+    font-size: clamp(1.6rem, 4vw + 0.5rem, 4rem);
+    line-height: 1.05;
+}
+
+/* Reduce big paddings/margins on very small screens */
+@media (max-width: 480px) {
+    .hero-header-overlay { padding: 1rem; border-radius: 0.75rem; }
+    .hero-header-title { font-size: 1.6rem; }
+    .hero-header-slogan { font-size: 0.95rem; }
+    section { padding: 5% 3%; }
+}
+

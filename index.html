@@ -38,9 +38,7 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav gap-3">
                     <li><a href="#" class="nav-link active text-primary fs-5">Home</a></li>
-                    <li><a href="education_work.html" class="nav-link text-secondary fs-5">Education & Work</a></li>
-                    <li><a href="research_projects.html" class="nav-link text-secondary fs-5">Research & Projects</a></li>
-                    <li><a href="awards.html" class="nav-link text-secondary fs-5">Awards</a></li>
+                    <li><a href="#projects" class="nav-link text-secondary fs-5">Projects</a></li>
                 </ul>
             </div>
             <!-- Social Icons -->
@@ -52,396 +50,157 @@
             </div>
         </div>
     </nav>
-        <!-- HERO HEADER (Concise, background image, blur, one-liner) -->
-        <header class="hero-header-bg position-relative d-flex align-items-center justify-content-center">
-            <div class="hero-header-overlay text-center w-100">
-                <h1 class="hero-header-title fw-bold mb-3">Po Ju (Austin) Chao</h1>
-                <div class="hero-header-slogan fs-4 fw-semibold">Engineering Intelligent Robots for Everyday Life</div>
-            </div>
-        </header>
     <!-- About Section -->
     <section class="about">
         <div class="title text-center d-flex flex-column align-items-center gap-2" data-aos="fade-up">
-            <h2 class="fw-bold title-text">About</h2>
-            <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg" width="200" height="20">
-                <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="#25477D" stroke-width="2"></path>
-            </svg>
+
             <!-- <p class="fs-6 text-secondary w-50">A brief self-introduction and personal details.</p> -->
         </div>
         <div class="container about-flex" data-aos="fade-up" data-aos-delay="100">
             <div class="about-img-col">
                 <img src="image/portrait/portrait1.jpg" alt="Austin Chao portrait" class="about-portrait img-fluid rounded">
+                <div class="personal-info">
+                    <a class="profile-link" href="https://www.meche.engineering.cmu.edu/" target="_blank" rel="noopener">
+                        <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+                        <span>CMU MSME, PA, U.S.</span>
+                    </a>
+                    <a class="profile-link" href="mailto:pojuchao@andrew.cmu.edu">
+                        <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+                        <span>Email</span>
+                    </a>
+                    <a class="profile-link" href="https://docs.google.com/document/d/1K3Jw77ird7YGYVsH4AYqyiNbfr8dIlUW/edit?pli=1" target="_blank" rel="noopener">
+                        <i class="bi bi-file-earmark-text-fill" aria-hidden="true"></i>
+                        <span>CV</span>
+                    </a>
+                    <a class="profile-link" href="tel:+14122874557">
+                        <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+                        <span>Telephone</span>
+                    </a>
+                </div>
             </div>
-            <div class="about-info-col d-flex flex-column justify-content-center">
-                <h2 class="fw-bold mb-3 about-title">Autonomous Control &amp; Robotics Researcher</h2>
+            <div class="about-info-col">
+                <h2 class="fw-bold about-title">PoJu (Austin) Chao</h2>
                 <div class="about-highlight mb-3">
-                    <span class="about-hello">Hello, my name is Austin Chao.</span> I am a robotics engineer specializing in control systems and algorithm development. My focus is on integrating perception, navigation, and control system to build safer and more versatile robotic systems. I am passionate about creating robots that can seamlessly integrate into daily human life and truly assist people in meaningful ways.
-                </div>
-                <div class="personal-info shadow rounded p-4">
-                    <div class="row g-3">
-                        <div class="col-6">
-                            <div class="d-flex flex-column align-items-start">
-                                <span class="label text-secondary">Name</span>
-                                <span class="value text-dark fw-bold">Austin Chao</span>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="d-flex flex-column align-items-start">
-                                <span class="label text-secondary">Phone</span>
-                                <span class="value text-dark fw-bold">+(886) 983 189 963</span>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="d-flex flex-column align-items-start">
-                                <span class="label text-secondary">Age</span>
-                                <span class="value text-dark fw-bold">22 Years</span>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="d-flex flex-column align-items-start">
-                                <span class="label text-secondary">E-mail</span>
-                                <span class="value text-dark fw-bold">austinchao886@gmail.com</span>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="d-flex flex-column align-items-start">
-                                <span class="label text-secondary">Occupation</span>
-                                <span class="value text-dark fw-bold">Robotics Researcher</span>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="d-flex flex-column align-items-start">
-                                <span class="label text-secondary">Nationality</span>
-                                <span class="value text-dark fw-bold">Taiwan</span>
-                            </div>
-                        </div>
-                    </div>
+                    <p>I am an M.S. student in <a href="https://www.meche.engineering.cmu.edu/" target="_blank" rel="noopener">Mechanical Engineering</a> at Carnegie Mellon University and a Research Assistant at the <a href="https://safeai-lab.github.io/" target="_blank" rel="noopener">Safe AI Lab</a>, directed by <a href="https://www.meche.engineering.cmu.edu/directory/bios/zhao-ding.html" target="_blank" rel="noopener">Professor Ding Zhao</a>. I am currently working on social navigation for humanoid robots through a collaborative research project with the <a href="https://hcii.cmu.edu/" target="_blank" rel="noopener">Human-Computer Interaction Institute (HCII)</a> at Carnegie Mellon University, working with <a href="https://yaruniu.com/" target="_blank" rel="noopener">Yaru Niu</a> and <a href="https://hcii.cmu.edu/people/howard-han" target="_blank" rel="noopener">Howard Han</a>. My research interests focus on whole-body control, robotic system design, and navigation.</p>
+                    <p>Previously, I received my B.S. in Mechanical Engineering from <a href="https://www.me.ncu.edu.tw/en/" target="_blank" rel="noopener">National Central University</a>. At NCU, I led the development of a frisbee-launching mobile robot for the <a href="https://www.tel.com/blog/all/20250711_001.html" target="_blank" rel="noopener">2024 TEL Robot Combat</a>. The project received the High Distinction Award in the College of Engineering Capstone Project Presentation Competition. I later worked as a Robotics Software Engineer Intern at the <a href="https://www.itri.org.tw/english/index.aspx" target="_blank" rel="noopener">Industrial Technology Research Institute (ITRI)</a>, where I developed learning-based locomotion and real-time control systems for a panda-inspired robotic platform.</p>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Skills -->
-        <!-- Modern Skills Section -->
-        <section class="skills-section" style="background: linear-gradient(135deg, #f8f9fa 60%, #e9ecef 100%); padding: 60px 0;">
-            <div class="container">
-                <div class="title text-center d-flex flex-column align-items-center gap-2" data-aos="fade-up">
-                    <h2 class="fw-bold title-text" style="color:#25477D;">Skills</h2>
-                    <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg" width="200" height="20">
-                        <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="#25477D" stroke-width="2"></path>
-                    </svg>
-                </div>
-                <!-- <h2 class="text-center fw-bold mb-2" style="color: #25477D; font-size: 2.5rem;">What I do</h2> -->
-                <div class="skills-card shadow-lg rounded-4 p-4 p-md-5 mx-auto mt-4" style="background: #fff; max-width: 1200px;" data-aos="fade-up"+>
-                      <!-- <p class="text-center text-secondary mb-4" style="max-width: 700px; margin: 0 auto;">A short description about your skills and what you do. (You can edit this text.)</p> -->
-                      <!-- Skills Grid: 5 columns per row, 2 rows -->
-                        <div class="row row-cols-2 row-cols-md-5 g-4 justify-content-center" data-aos="fade-up" data-aos-delay="200">
-                        <!-- Placeholder skill cards, replace with your items -->
-                        <div class="col">
-                            <div class="bg-light rounded-3 shadow-sm d-flex flex-column align-items-center justify-content-center p-4" style="min-height: 120px;">
-                                <div class="mb-2">
-                                    <img src="image/icon/Robot%20Operating%20System%20(ROS).png" alt="ROS2 icon" style="height: 64px; width: 64px; object-fit: contain;">
-                                </div>
-                                <div class="fw-semibold" style="color:#25477D; font-size: 1.35rem; margin-top: 0.5rem;">ROS2</div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="bg-light rounded-3 shadow-sm d-flex flex-column align-items-center justify-content-center p-4" style="min-height: 120px;">
-                                <div class="mb-2">
-                                    <img src="image/icon/Linux.png" alt="Linux icon" style="height: 64px; width: 64px; object-fit: contain;">
-                                </div>
-                                <div class="fw-semibold" style="color:#25477D; font-size: 1.35rem; margin-top: 0.5rem;">Linux</div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="bg-light rounded-3 shadow-sm d-flex flex-column align-items-center justify-content-center p-4" style="min-height: 120px;">
-                                <div class="mb-2">
-                                    <img src="image/icon/Python.png" alt="Python icon" style="height: 64px; width: 64px; object-fit: contain;">
-                                </div>
-                                <div class="fw-semibold" style="color:#25477D; font-size: 1.35rem; margin-top: 0.5rem;">Python</div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="bg-light rounded-3 shadow-sm d-flex flex-column align-items-center justify-content-center p-4" style="min-height: 120px;">
-                                <div class="mb-2">
-                                    <img src="image/icon/C.png" alt="C icon" style="height: 64px; width: 64px; object-fit: contain;">
-                                </div>
-                                <div class="fw-semibold" style="color:#25477D; font-size: 1.35rem; margin-top: 0.5rem;">C</div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="bg-light rounded-3 shadow-sm d-flex flex-column align-items-center justify-content-center p-4" style="min-height: 120px;">
-                                <div class="mb-2">
-                                    <img src="image/icon/MATLAB.png" alt="Matlab icon" style="height: 64px; width: 64px; object-fit: contain;">
-                                </div>
-                                <div class="fw-semibold" style="color:#25477D; font-size: 1.35rem; margin-top: 0.5rem;">Matlab</div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="bg-light rounded-3 shadow-sm d-flex flex-column align-items-center justify-content-center p-4" style="min-height: 120px;">
-                                <div class="mb-2">
-                                    <img src="image/icon/Solidworks.png" alt="SolidWorks icon" style="height: 64px; width: 64px; object-fit: contain;">
-                                </div>
-                                <div class="fw-semibold" style="color:#25477D; font-size: 1.35rem; margin-top: 0.5rem;">SolidWorks</div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="bg-light rounded-3 shadow-sm d-flex flex-column align-items-center justify-content-center p-4" style="min-height: 120px;">
-                                <div class="mb-2">
-                                    <img src="image/icon/Docker.png" alt="Docker icon" style="height: 64px; width: 64px; object-fit: contain;">
-                                </div>
-                                <div class="fw-semibold" style="color:#25477D; font-size: 1.35rem; margin-top: 0.5rem;">Docker</div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="bg-light rounded-3 shadow-sm d-flex flex-column align-items-center justify-content-center p-4" style="min-height: 120px;">
-                                <div class="mb-2">
-                                    <img src="image/icon/Git.png" alt="Git icon" style="height: 64px; width: 64px; object-fit: contain;">
-                                </div>
-                                <div class="fw-semibold" style="color:#25477D; font-size: 1.35rem; margin-top: 0.5rem;">Git</div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="bg-light rounded-3 shadow-sm d-flex flex-column align-items-center justify-content-center p-4" style="min-height: 120px;">
-                                <div class="mb-2">
-                                    <img src="image/icon/Arduino.png" alt="Arduino icon" style="height: 64px; width: 64px; object-fit: contain;">
-                                </div>
-                                <div class="fw-semibold" style="color:#25477D; font-size: 1.35rem; margin-top: 0.5rem;">Arduino</div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="bg-light rounded-3 shadow-sm d-flex flex-column align-items-center justify-content-center p-4" style="min-height: 120px;">
-                                <div class="mb-2">
-                                    <img src="image/icon/subbrand-stm32.svg" alt="STM32 icon" style="height: 64px; width: 64px; object-fit: contain;">
-                                </div>
-                                <div class="fw-semibold" style="color:#25477D; font-size: 1.35rem; margin-top: 0.5rem;">STM32</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    <!-- PORTFOLIO -->
-    <section class="Research & Projects" id="portfolio-section">
+    <!-- PROJECTS -->
+    <section class="projects-section" id="projects">
         <div class="container">
-            <div class="title text-center d-flex flex-column align-items-center gap-2" data-aos="fade-up">
-                <h2 class="fw-bold title-text">Portfolio</h2>
-                <!-- svg -->
-                <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg" width="200" height="20">
-                    <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="#3d03b8"
-                        stroke-width="2"></path>
-                </svg>
-                <!-- <p class="fs-6 text-secondary w-50">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
-                    quam nihil molestiae consequatur vel illum qui dolorem</p> -->
-            </div>
-            <div class="pf-filters d-flex align-items-center justify-content-center flex-wrap gap-3 mt-3 p-3"
-                data-aos="fade-up" data-aos-delay="200">
-                <button class="btn btn-light" data-filter="all">All</button>
-                <button class="btn btn-light" data-filter=".Work">Work</button>
-                <button class="btn btn-light" data-filter=".Research">Research</button>
-                <button class="btn btn-light" data-filter=".Competition">Competition & Exhibition</button>
-                <button class="btn btn-light" data-filter=".Side_Project">Side Project</button>
-            </div>
-            <div class="row pf-container g-4 mt-3 mb-3" data-aos="fade-up" data-aos-delay="300">
-                <!-- Panda Robot - Perception-->
-                <div class="col-md-6 col-lg-6 pf-wrap mix Work">
-                    <div class="pf-card d-flex flex-column gap-3 rounded">
-                        <div class="pf-img">
-                            <img src="image/Portfolio/Panda_Perception.jpg" alt="" class="img-fluid rounded">
-                            <div class="pf-bg-light"></div>
-                        </div>
-                        <div class="pf-content p-3">
-                            <span class="text-primary mt-2">Work</span>
-                            <h3 class="text-dark fs-3 mt-2 mb-2">Panda Robot - Perception</h3>
-                            <p class="text-dark fs-6">Integrating vision and intelligence into a bio-mimetic robotic platform.</p>
-                        </div>
+            <h2 class="projects-heading">Projects</h2>
+            <div class="project-list">
+                <article class="project-row">
+                    <div class="project-visual">
+                        <video class="project-preview" muted loop playsinline preload="metadata" poster="image/Portfolio/Panda_motioncontrol.png" aria-label="Panda robot motion control video">
+                            <source src="materials/panda_motion_control.MP4" type="video/mp4">
+                        </video>
                     </div>
-                </div>
-                <!-- Panda Robot - Motion Control -->
-                <div class="col-md-6 col-lg-6 pf-wrap mix Work">
-                    <div class="pf-card d-flex flex-column gap-3 rounded ">
-                        <div class="pf-img">
-                            <img src="image/Portfolio/Panda_motioncontrol.png" alt="" class="img-fluid rounded">
-                            <div class="pf-bg-light"></div>
-                        </div>
-                        <div class="pf-content p-3">
-                            <span class="text-primary mt-2">Work</span>
-                            <h3 class="text-dark fs-3 mt-2 mb-2">Panda Robot - Motion Control</h3>
-                            <p class="text-dark fs-6">Developing adaptive locomotion strategies with RL for complex robotic motions.</p>
-                        </div>
+                    <div class="project-details">
+                        <div class="project-meta">Work · ITRI · Jul. 2025 – Jun. 2026</div>
+                        <h3>Panda Robot — Motion Control</h3>
+                        <p class="project-affiliation">Industrial Technology Research Institute, Mechanical and Mechatronics Systems Research Lab</p>
+                        <p>Developed reinforcement-learning locomotion policies, a hierarchical control framework, and real-time policy deployment for a custom panda-inspired robotic platform.</p>
+                        <div class="project-actions"><a href="panda_motion_control.html">webpage</a></div>
                     </div>
-                </div>
-                <!-- Modeling and Control of a 2D Inverted Pendulum -->
-                <div class="col-md-6 col-lg-6 pf-wrap mix Research">
-                    <div class="pf-card d-flex flex-column gap-3 rounded">
-                        <div class="pf-img">
-                            <img src="image/Portfolio/2d_inverted_pendulum.jpg" alt="" class="img-fluid rounded">
-                            <div class="pf-bg-light"></div>
-                        </div>
-                        <div class="pf-content p-3">
-                            <span class="text-primary mt-2">Research</span>
-                            <h3 class="text-dark fs-3 mt-2 mb-2">Modeling and Control of a 2D Inverted Pendulum</h3>
-                            <p class="text-dark fs-6">Implementing real-world autonomy with SLAM on a ROS2-driven robot.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Autonomous Exploration and SLAM Mobile Robot -->
-                <div class="col-md-6 col-lg-6 pf-wrap mix Side_Project Research">
-                    <div class="pf-card d-flex flex-column gap-3 rounded">
-                        <div class="pf-img">
-                            <img src="image/Portfolio/autonomous_car.png" alt="" class="img-fluid rounded">
-                            <div class="pf-bg-light"></div>
-                        </div>
-                        <div class="pf-content p-3">
-                            <span class="text-primary mt-2">Side Project</span>
-                            <span class="text-primary category-spaced" style="margin-left:2.5rem;">Research</span>
-                            <h3 class="text-dark fs-3 mt-2 mb-2">Autonomous Exploration and SLAM Mobile Robot</h3>
-                            <p class="text-dark fs-6">Built a differential-drive mobile robot and deployed navigation, SLAM, and autonomous exploration algorithms</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- TEL Robotics Competition -->
-                <div class="col-md-6 col-lg-6 pf-wrap mix Competition">
-                    <!-- <a href="TEL_demo.html" style="text-decoration:none; color:inherit;"> -->
-                        <div class="pf-card d-flex flex-column gap-3 rounded">
-                            <div class="pf-img">
-                                <img src="image/Portfolio/TEL_Robotic_Competition.jpg" alt="" class="img-fluid rounded">
-                                <div class="pf-bg-light"></div>
-                            </div>
-                            <div class="pf-content p-3">
-                                <span class="text-primary mt-2">Competition</span>
-                                <h3 class="text-dark fs-3 mt-2 mb-2">Design and Implementation of a Frisbee-Launching Mobile Robot</h3>
-                                <p class="text-dark fs-6">Captain of a team building a frisbee-launching robot in TEL robotics combat 2024.</p>
-                            </div>
-                        </div>
-                    <!-- </a> -->
-                </div>
-                <!-- Future Tech Pavilion — Taiwan Innotech Expo 2025 -->
-                <div class="col-md-6 col-lg-6 pf-wrap mix Competition">
-                    <!-- <a href="TEL_Aim_demo.html" style="text-decoration:none; color:inherit;"> -->
-                        <div class="pf-card d-flex flex-column gap-3 rounded">
-                            <div class="pf-img">
-                                <img src="image/Portfolio/Taiwan_Innotech_Expo_robot.png" alt="" class="img-fluid rounded">
-                                <div class="pf-bg-light"></div>
-                            </div>
-                            <div class="pf-content p-3">
-                                <div class="mb-2">
-                                    <span class="text-primary category-spaced">Exhibition</span>
-                                    <!-- <span class="text-primary category-spaced" style="margin-left:2.5rem;">Research</span> -->
-                                </div>
-                                <h3 class="text-dark fs-3 mt-2 mb-2">Fuzzy Dynamic Obstacle Avoidance and Reinforcement Learning for Quadruped Robot</h3>
-                                <p class="text-dark fs-6">Participated in the Future Tech Pavilion at Taiwan Innotech Expo 2025</p>
-                            </div>
-                        </div>
-                    <!-- </a> -->
-                </div>
+                </article>
 
-                <!-- MicroController -->    
-                <div class="col-md-6 col-lg-6 pf-wrap mix Side_Project">
-                    <div class="pf-card d-flex flex-column gap-3 rounded">
-                        <div class="pf-img">
-                            <img src="image/Portfolio/MicroController.jpg" alt="" class="img-fluid rounded">
-                            <div class="pf-bg-light"></div>
-                        </div>
-                        <div class="pf-content p-3">
-                            <span class="text-primary mt-2">Side Project</span>
-                            <h3 class="text-dark fs-3 mt-2 mb-2">Embedded Calculator Design</h3>
-                            <p class="text-dark fs-6">Built a fully functional calculator using MCU programming and IC-based circuit design.</p>
+                <article class="project-row">
+                    <div class="project-visual">
+                        <video class="project-preview" muted loop playsinline preload="metadata" poster="image/Portfolio/Panda_Perception.jpg" aria-label="Panda robot perception video">
+                            <source src="materials/panda_perception.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-meta">Work · ITRI · Mar. 2025 – Jun. 2025</div>
+                        <h3>Panda Robot — Perception</h3>
+                        <p class="project-affiliation">Industrial Technology Research Institute, Mechanical and Mechatronics Systems Research Lab</p>
+                        <p>Built a tree-trunk detection and localization pipeline using YOLO, Jetson Orin Nano, ONNX acceleration, and VSLAM for robust outdoor perception.</p>
+                        <div class="project-actions"><a href="panda_perception.html">webpage</a></div>
+                    </div>
+                </article>
+
+                <article class="project-row">
+                    <div class="project-visual">
+                        <video class="project-preview" muted loop playsinline preload="metadata" poster="image/Portfolio/autonomous_car.png" aria-label="Autonomous exploration and SLAM mobile robot video">
+                            <source src="materials/autonomous_exploration.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-meta">Research · NCU · Jan. 2025 – Jun. 2025</div>
+                        <h3>Autonomous Exploration and SLAM Mobile Robot</h3>
+                        <p class="project-affiliation">Robotics, Autonomy, and Mechatronics Systems Lab</p>
+                        <p>Designed and integrated a ROS 2 mobile robot capable of SLAM, autonomous exploration, navigation, and relocalization in unknown environments.</p>
+                        <div class="project-actions">
+                            <a href="research_file/Autonomous%20Car_doc.pdf" target="_blank">report</a>
+                            <a href="https://github.com/austinchao886/autonomous_mobile_car" target="_blank" rel="noopener">code</a>
+                            <a href="https://github.com/austinchao886/nav2_autonomous_exploration" target="_blank" rel="noopener">exploration</a>
                         </div>
                     </div>
-                </div>
-                <!-- Upstairs Car Project -->
-                <div class="col-md-6 col-lg-6 pf-wrap mix Side_Project">
-                    <div class="pf-card d-flex flex-column gap-3 rounded">
-                        <div class="pf-img">
-                            <img src="image/Portfolio/Upstairs_car.jpg" alt="" class="img-fluid rounded">
-                            <div class="pf-bg-light"></div>
-                        </div>
-                        <div class="pf-content p-3">
-                            <span class="text-primary mt-2">Side Project</span>
-                            <h3 class="text-dark fs-3 mt-2 mb-2">Upstairs Car Project</h3>
-                            <p class="text-dark fs-6">Designed and built a 3D-printed stair-climbing robot with Bluetooth control.</p>
+                </article>
+
+                <article class="project-row">
+                    <div class="project-visual">
+                        <video class="project-preview" muted loop playsinline preload="metadata" poster="image/Portfolio/TEL_Robotic_Competition.jpg" aria-label="Frisbee-launching mobile robot video">
+                            <source src="materials/frisbee_robot.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-meta">Competition · NCU · Mar. 2024 – Dec. 2024</div>
+                        <h3>Design and Implementation of a Frisbee-Launching Mobile Robot</h3>
+                        <p class="project-affiliation">2024 TEL Robot Combat · Team Captain</p>
+                        <p>Led the development of an omnidirectional mobile robot with automatic reloading, stereo-vision targeting, and continuous frisbee launching.</p>
+                        <div class="project-actions">
+                            <a href="https://youtu.be/3CL8_8u2Yug" target="_blank" rel="noopener">video</a>
+                            <a href="research_file/Capstone%20Project_%20Development%20of%20a%20Frisbee-Launching%20Mobile%20Robot.pdf" target="_blank">report</a>
+                            <a href="https://www.tel.com/blog/all/20250711_001.html" target="_blank" rel="noopener">TEL</a>
                         </div>
                     </div>
-                </div>
-            <!-- More Details Button -->
-            <div class="d-flex justify-content-end mt-4">
-                <a href="research_projects.html" class="btn d-flex align-items-center" style="border-radius: 24px; font-size: 1.15rem; padding: 0.6rem 1.7rem; gap: 0.7rem; background:#10294a; color:#fff; border:none;">
-                    More Details
-                    <i class="bi bi-arrow-right" style="font-size: 1.3rem;"></i>
-                </a>
-            </div>
+                </article>
+
+                <article class="project-row">
+                    <div class="project-visual">
+                        <img src="image/Portfolio/Taiwan_Innotech_Expo_robot.png" alt="Quadruped robot at Taiwan Innotech Expo">
+                    </div>
+                    <div class="project-details">
+                        <div class="project-meta">Exhibition · 2025 Future Tech · Jul. 2025 – Oct. 2025</div>
+                        <h3>Fuzzy Dynamic Obstacle Avoidance and Reinforcement Learning for Quadruped Robot</h3>
+                        <p class="project-affiliation">Taiwan Innotech Expo 2025</p>
+                        <p>Combined LiDAR–IMU sensor fusion, fuzzy obstacle avoidance, and reinforcement learning for adaptive quadruped navigation in dynamic environments.</p>
+                        <div class="project-actions">
+                            <a href="https://tie.twtm.com.tw/zh-tw/exhibition-detail/5505" target="_blank" rel="noopener">webpage</a>
+                            <a href="https://github.com/austinchao886/isaac_lab_rl" target="_blank" rel="noopener">code</a>
+                            <a href="https://www.youtube.com/watch?v=9fzXiB_ehGY" target="_blank" rel="noopener">video</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-row">
+                    <div class="project-visual">
+                        <video class="project-preview" muted loop playsinline preload="metadata" poster="image/Portfolio/Upstairs_car.jpg" aria-label="Stair-climbing robot video">
+                            <source src="materials/stair-climbing_robot.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-meta">Independent Project · NCU · Sep. 2023 – Dec. 2023</div>
+                        <h3>Stair-Climbing Robot</h3>
+                        <p class="project-affiliation">Mechanical design and embedded control</p>
+                        <p>Designed and fabricated a Bluetooth-controlled stair-climbing vehicle using 3D printing, laser cutting, Arduino, servo motors, and DC motors.</p>
+                        <div class="project-actions">
+                            <a href="https://youtube.com/shorts/DmKfxqbEJzs" target="_blank" rel="noopener">video</a>
+                            <a href="research_file/Project%20Research_%20%20Stair-Climbing%20Robot.pdf" target="_blank">report</a>
+                        </div>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
-    
-    <!-- Contact -->
-    <section class="contact">
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-            <div class="row g-5">
-                <div class="col-lg-6">
-                    <div class="contact-content" data-aos="fade-right" data-aos-delay="200">
-                        <div class="mb-3 fs-5">Contact</div>
-                            <h2 class="mb-4"><strong>Feel free to reach out to me for any inquiries and collaborations. I am always open to be part of your vision.</strong></h2>
-                            <p class="lead mb-2">You can contact me via email, phone or visit my office at the address below.</p>
-                        <div class="contact-info mt-5">
-                            <div class="info-box d-flex align-items-center mb-2">
-                                <i class="bi bi-envelope-at me-3 fs-5 text-primary"></i>
-                                <span class="fs-6">austinchao886@gmail.com</span>
-                            </div>
 
-                            <div class="info-box d-flex align-items-center mb-2">
-                                <i class="bi bi-telephone me-3 fs-5 text-primary"></i>
-                                <span class="fs-6">+886 983 189 963</span>
-                            </div>
-
-                            <div class="info-box d-flex align-items-center mb-2">
-                                <i class="bi bi-instagram me-3 fs-5 text-primary"></i>
-                                <a href="https://www.instagram.com/bella_chao__austin/" class="fs-6 text-decoration-none" target="_blank">@bella_chao__austin</a>
-                            </div>
-
-                            <!-- <a href="#" class="map-link d-inline-flex align-items-center text-dark fs-5 mt-3">Open Map
-                                <i class="bi bi-arrow-right ms-2"></i>
-                            </a> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="contact-form shadow rounded" data-aos="fade-left" data-aos-delay="300">
-                        <div class="p-4 p-lg-5">
-                            <form>
-                                <div class="row gy-4">
-                                    <div class="col-12">
-                                        <input type="text" class="form-control" placeholder="Your Name" required>
-                                    </div>
-                                    <div class="col-12">
-                                        <input type="email" class="form-control" placeholder="Your E-mail" required>
-                                    </div>
-                                    <div class="col-12">
-                                        <input type="text" class="form-control" placeholder="Subject" required>
-                                    </div>
-                                    <div class="col-12">
-                                        <textarea class="form-control" name="massage" rows="6" placeholder="Message"></textarea>
-                                    </div>
-                                    <div class="col-12 text-center">
-                                        <button type="button" class="btn btn-submit w-100">Submit Message</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- Footer -->
     <footer class="footer shadow p-5">
         <div class="container d-flex flex-column align-items-center" data-aos="fade-down" data-aos-delay="100">
-            <ul class="d-flex align-items-center justify-content-center flex-wrap gap-3">
-                <li><a href="#" class="text-dark fs-4">Home</a></li>
-                <li><a href="#" class="text-dark fs-4">Research & Projects</a></li>
-                <li><a href="#" class="text-dark fs-4">Experience & Skills</a></li>
-                <li><a href="#" class="text-dark fs-4">Adwards</a></li>
-            </ul>
 
             <div class="social-links mt-2 d-flex align-items-center gap-2">
                 <i class="border rounded-circle text text-secondary bi bi-facebook"></i>
@@ -461,8 +220,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
     <!-- AOS JS  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <!-- Mixitup JS  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
     <!-- Script JS -->
     <script src="script.js"></script>
 </body>

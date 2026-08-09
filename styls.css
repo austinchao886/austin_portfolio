@@ -123,6 +123,9 @@
 }
 /* Make About title slightly smaller than the main intro wording */
 .about-title {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
     font-size: 1.5rem;
     font-weight: 700;
     color: #232323;
@@ -279,14 +282,22 @@
 /* Compact project list */
 .projects-section {
     padding: 4.5rem 0 5rem;
-    background: #fff;
+    background: var(--section-color);
 }
 .projects-heading {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
     margin: 0 0 2rem;
     color: #232323;
     font-size: 1.8rem;
     font-weight: 700;
     text-align: left;
+}
+.heading-icon {
+    color: #4a5259;
+    font-size: 0.9em;
+    line-height: 1;
 }
 .project-list {
     border-top: 1px solid #e1e4e7;

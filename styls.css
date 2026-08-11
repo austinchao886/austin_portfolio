@@ -341,7 +341,19 @@
     font-size: 0.9rem;
     font-style: italic;
 }
-.project-details > p:not(.project-affiliation) {
+.project-award {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin: 0 0 0.4rem;
+    color: #9a6a00;
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+.project-award i {
+    color: #c58b00;
+}
+.project-details > p:not(.project-affiliation):not(.project-award) {
     margin: 0 0 0.55rem;
     color: #444b50;
     font-size: 0.92rem;
